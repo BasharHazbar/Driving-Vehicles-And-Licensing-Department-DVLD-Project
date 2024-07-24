@@ -32,7 +32,7 @@
             this.pbFindLicense = new System.Windows.Forms.PictureBox();
             this.tbFind = new System.Windows.Forms.TextBox();
             this.lbLicenseID = new System.Windows.Forms.Label();
-            this.ctrlLicenseCard1 = new DVLD.Controls.ctrlLicenseCard();
+            this.ctrlLicenseCard = new DVLD.Controls.ctrlLicenseCard();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFindLicense)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             // pbFindLicense
             // 
             this.pbFindLicense.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbFindLicense.Image = global::DVLD.Properties.Resources.Add_Person;
+            this.pbFindLicense.Image = global::DVLD.Properties.Resources.Find_Person;
             this.pbFindLicense.Location = new System.Drawing.Point(394, 34);
             this.pbFindLicense.Name = "pbFindLicense";
             this.pbFindLicense.Size = new System.Drawing.Size(74, 42);
@@ -81,18 +81,18 @@
             this.lbLicenseID.TabIndex = 0;
             this.lbLicenseID.Text = "License ID:";
             // 
-            // ctrlLicenseCard1
+            // ctrlLicenseCard
             // 
-            this.ctrlLicenseCard1.Location = new System.Drawing.Point(0, 103);
-            this.ctrlLicenseCard1.Name = "ctrlLicenseCard1";
-            this.ctrlLicenseCard1.Size = new System.Drawing.Size(966, 316);
-            this.ctrlLicenseCard1.TabIndex = 4;
+            this.ctrlLicenseCard.Location = new System.Drawing.Point(0, 103);
+            this.ctrlLicenseCard.Name = "ctrlLicenseCard";
+            this.ctrlLicenseCard.Size = new System.Drawing.Size(966, 316);
+            this.ctrlLicenseCard.TabIndex = 4;
             // 
             // ctrlFindLicenseCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ctrlLicenseCard1);
+            this.Controls.Add(this.ctrlLicenseCard);
             this.Controls.Add(this.gbFilter);
             this.Name = "ctrlFindLicenseCard";
             this.Size = new System.Drawing.Size(967, 420);
@@ -109,6 +109,6 @@
         private System.Windows.Forms.PictureBox pbFindLicense;
         private System.Windows.Forms.TextBox tbFind;
         private System.Windows.Forms.Label lbLicenseID;
-        private ctrlLicenseCard ctrlLicenseCard1;
+        private ctrlLicenseCard ctrlLicenseCard;
     }
 }

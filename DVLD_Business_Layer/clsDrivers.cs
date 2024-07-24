@@ -10,9 +10,6 @@ namespace DVLD_Business_Layer
 {
     public class clsDrivers
     {
-        public enum enMode { AddDriver = 0 };
-
-        private enMode _Mode;
         public int DriverID { get; set; }
         public int PersonID { get; set; }
         public int CreatedByUserID { get; set; }
@@ -32,7 +29,6 @@ namespace DVLD_Business_Layer
             this.PersonID = -1;
             this.CreatedByUserID = -1;
             this.CreatedDate = DateTime.Now;
-            _Mode = enMode.AddDriver;
         }
 
         public clsDrivers(int DriverID, int PersonID, int CreatedByUserID, DateTime CreatedDate)

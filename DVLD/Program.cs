@@ -1,4 +1,6 @@
 ﻿using DVLD.Application_Types;
+using DVLD.Local_Driving_Licenses;
+using DVLD.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +19,7 @@ namespace DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmApplicationTypesManagement());
+            Application.Run(new frmLogin());
         }
     }
 }
