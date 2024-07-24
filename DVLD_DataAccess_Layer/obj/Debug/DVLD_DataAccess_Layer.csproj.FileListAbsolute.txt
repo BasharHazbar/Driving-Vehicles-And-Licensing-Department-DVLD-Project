@@ -1,0 +1,12 @@
+C:\Users\hbash\source\repos\DVLD_DataAccess_Layer\bin\Debug\DVLD_DataAccess_Layer.dll
+C:\Users\hbash\source\repos\DVLD_DataAccess_Layer\bin\Debug\DVLD_DataAccess_Layer.pdb
+C:\Users\hbash\source\repos\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.csproj.AssemblyReference.cache
+C:\Users\hbash\source\repos\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.csproj.CoreCompileInputs.cache
+C:\Users\hbash\source\repos\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.dll
+C:\Users\hbash\source\repos\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.pdb
+C:\Users\hbash\source\repos\DVLD\DVLD_DataAccess_Layer\bin\Debug\DVLD_DataAccess_Layer.dll
+C:\Users\hbash\source\repos\DVLD\DVLD_DataAccess_Layer\bin\Debug\DVLD_DataAccess_Layer.pdb
+C:\Users\hbash\source\repos\DVLD\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.csproj.AssemblyReference.cache
+C:\Users\hbash\source\repos\DVLD\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.csproj.CoreCompileInputs.cache
+C:\Users\hbash\source\repos\DVLD\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.dll
+C:\Users\hbash\source\repos\DVLD\DVLD_DataAccess_Layer\obj\Debug\DVLD_DataAccess_Layer.pdb
