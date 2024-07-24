@@ -1,0 +1,66 @@
+# Ignore build directories
+**/bin/
+**/obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore environment variable files
+.env
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore output directories for .NET projects
+**/bin/
+**/obj/
+
+# Ignore packages directory for NuGet
+**/packages/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore test results
+TestResults/
+
+# Ignore Recycle Bin folder
+$RECYCLE.BIN/
+
+# Ignore temp files
+*.tmp
+
+# Ignore Visual Studio Code workspace files
+.vscode/
+
+# Ignore Visual Studio working files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Ignore Web-specific files
+node_modules/
+bower_components/
+
+# Ignore npm-debug.log
+npm-debug.log
