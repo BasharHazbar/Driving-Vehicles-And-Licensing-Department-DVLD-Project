@@ -1,5 +1,6 @@
 ﻿using DVLD.Application_Types;
 using DVLD.Local_Driving_Licenses;
+using DVLD.People;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,6 +56,12 @@ namespace DVLD
         {
             frmTestTypesManagement  TestTypesManagement = new frmTestTypesManagement();
             TestTypesManagement.ShowDialog();
+        }
+
+        private void tsmPeopleManagement_Click(object sender, EventArgs e)
+        {
+            frmPeopleManagement PeopleManagement = new frmPeopleManagement();   
+            PeopleManagement.ShowDialog();
         }
     }
 }

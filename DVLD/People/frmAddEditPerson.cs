@@ -56,7 +56,7 @@ namespace DVLD.People
         private void Validation(CancelEventArgs e, Control control, string MessageError)
         {
 
-            if (string.IsNullOrWhiteSpace(control.Text))
+            if (IsEmpty(control.Text))
             {
                 e.Cancel = true;
                 tbLast.Focus();
@@ -76,15 +76,15 @@ namespace DVLD.People
             return System.Text.RegularExpressions.Regex.IsMatch(Email, pattern);
         }
 
-        private bool isEmpty(string Value)
+        private bool IsEmpty(string Value)
         {
-            return string.IsNullOrWhiteSpace(Value) || string.IsNullOrEmpty(Value);
+            return clsGlobalSettings.IsEmpty(Value);
         }
 
-        private bool isEmptyFaild()
+        private bool IsEmptyFaild()
         {
-            return isEmpty(tbFirst.Text) || isEmpty(tbSecond.Text) || isEmpty(tbLast.Text) || isEmpty(tbNationalNo.Text)
-                || isEmpty(dtpDataOfBirth.Text) || isEmpty(tbPhone.Text) || isEmpty(tbAddress.Text);
+            return IsEmpty(tbFirst.Text) || IsEmpty(tbSecond.Text) || IsEmpty(tbLast.Text) || IsEmpty(tbNationalNo.Text)
+                || IsEmpty(dtpDataOfBirth.Text) || IsEmpty(tbPhone.Text) || IsEmpty(tbAddress.Text);
         }
 
         void LoadData()
@@ -192,7 +192,7 @@ namespace DVLD.People
             // _Person.PersonID = _PersonID;
 
 
-            if (isEmptyFaild())
+            if (IsEmptyFaild())
             {
                 MessageBox.Show("Please Fill The Faild", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -293,7 +293,7 @@ namespace DVLD.People
 
         private void tbNationalNo_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbNationalNo.Text))
+            if (IsEmpty(tbNationalNo.Text))
             {
                 e.Cancel = true;
                 tbNationalNo.Focus();
@@ -314,13 +314,13 @@ namespace DVLD.People
 
         private void tbPhone_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbPhone.Text))
+            if (IsEmpty(tbPhone.Text))
             {
                 e.Cancel = true;
                 tbLast.Focus();
                 epValidating.SetError(tbPhone, "Phone Should Have A Value");
             }
-            else if (!string.IsNullOrWhiteSpace(tbPhone.Text) && tbPhone.Text.Any(char.IsLetter))
+            else if (!IsEmpty(tbPhone.Text) && tbPhone.Text.Any(char.IsLetter))
             {
                 e.Cancel = true;
                 tbLast.Focus();
@@ -340,7 +340,7 @@ namespace DVLD.People
 
         private void tbEmail_Validating(object sender, CancelEventArgs e)
         {
-            if (!IsValidEmail(tbEmail.Text) && !string.IsNullOrWhiteSpace(tbEmail.Text))
+            if (!IsValidEmail(tbEmail.Text) && !IsEmpty(tbEmail.Text))
             {
                 e.Cancel = true;
                 tbLast.Focus();

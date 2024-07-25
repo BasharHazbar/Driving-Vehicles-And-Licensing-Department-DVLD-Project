@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD.People;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,7 +56,7 @@ namespace DVLD.Controls
                 return;
 
             }
-            else if (cbFind.Text == "National No")
+            else if (cbFind.Text == "National NO")
             {
                 int PersonID = ctrlPersonCard.LoadPersonData(tbFind.Text);
                 if (PersonID != -1)
@@ -99,10 +100,10 @@ namespace DVLD.Controls
 
         private void pbAddPerson_Click(object sender, EventArgs e)
         {
-/*            frmAddEditPerson frmAddEditPerson = new frmAddEditPerson(-1);
 
-            frmAddEditPerson.DataBack += frmAddEditPerson_dataBack;
-            frmAddEditPerson.ShowDialog();*/
+            frmAddEditPerson AddEditPerson = new frmAddEditPerson(-1);
+            AddEditPerson.DataBack += frmAddEditPerson_dataBack;
+            AddEditPerson.ShowDialog();
         }
 
         private void ctrlFindPersonCard_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 ﻿using DVLD.Local_Driving_Licenses;
+using DVLD.People;
 using DVLD_Business_Layer;
 using System;
 using System.Collections.Generic;
@@ -98,8 +99,9 @@ namespace DVLD.Controls
 
         private void lbShowPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-/*            frmPersonDetails frmPersonDetails = new frmPersonDetails((int)_ApplicationInfo["PersonID"]);
-            frmPersonDetails.ShowDialog();*/
+
+            frmPersonDetails frmPersonDetails = new frmPersonDetails((int)_ApplicationInfo["PersonID"]);
+            frmPersonDetails.ShowDialog(); 
 
         }
 

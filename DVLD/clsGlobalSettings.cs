@@ -34,5 +34,10 @@ namespace DVLD
             }
             return -1;
         }
+
+        public static bool IsEmpty(string Value)
+        {
+            return string.IsNullOrWhiteSpace(Value) || string.IsNullOrEmpty(Value);
+        }
     }
 }

@@ -61,3 +61,6 @@ D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmLicenseDetails.resourc
 D:\Projects\DVLD\obj\Debug\DVLD.People.frmPeopleManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.People.frmPersonDetails.resources
 D:\Projects\DVLD\obj\Debug\DVLD.People.frmAddEditPerson.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Users.frmUsersManagement.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Users.frmAddEditUser.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Users.frmUserDetails.resources

@@ -1,4 +1,5 @@
-﻿using DVLD.Properties;
+﻿using DVLD.People;
+using DVLD.Properties;
 using DVLD_Business_Layer;
 using System;
 using System.Collections.Generic;
@@ -130,16 +131,17 @@ namespace DVLD.Controls
 
         private void lbEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-/*            if (_Person != null)
+            if (_Person != null)
             {
-                frmAddEditPerson frmAddEditPerson = new frmAddEditPerson(_Person.PersonID);
-                frmAddEditPerson.DataBack += frmAddEditPerson_dataBack;
-                frmAddEditPerson.ShowDialog();
+
+                frmAddEditPerson AddEditPerson = new frmAddEditPerson(_Person.PersonID);
+                AddEditPerson.DataBack += frmAddEditPerson_dataBack;
+                AddEditPerson.ShowDialog();
             }
             else
             {
                 MessageBox.Show("There is No Person", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
         }
     }
 }
