@@ -322,6 +322,7 @@
             this.Controls.Add(this.gbTestInfo);
             this.Controls.Add(this.btnSave);
             this.Name = "frmTakeLocalDrivingLicenseTest";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Take Local Driving License Test";
             this.Load += new System.EventHandler(this.frmTakeLocalDrivingLicenseTest_Load);
             this.gbTestInfo.ResumeLayout(false);

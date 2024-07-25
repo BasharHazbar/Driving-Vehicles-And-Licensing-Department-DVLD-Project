@@ -54,3 +54,10 @@ D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmNewLocalDrivingLicense
 D:\Projects\DVLD\obj\Debug\DVLD.frmDriversManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmTestTypesManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Test_Types.frmEditTestTypes.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlDriverLicenses.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Licenses_History.frmLicensesHistory.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmIssueDrivingLicense.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmLicenseDetails.resources
+D:\Projects\DVLD\obj\Debug\DVLD.People.frmPeopleManagement.resources
+D:\Projects\DVLD\obj\Debug\DVLD.People.frmPersonDetails.resources
+D:\Projects\DVLD\obj\Debug\DVLD.People.frmAddEditPerson.resources

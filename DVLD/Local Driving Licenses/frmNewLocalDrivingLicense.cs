@@ -157,7 +157,7 @@ namespace DVLD.Local_Driving_Licenses
             _LocalDrivingLicenseApplications.LicenseClassID = clsLicenseClasses.
                                 Find(cbLicenseClasses.Text).LicenseClassID;
 
-            if (_Mode == enMode.AddApplication && clsApplications.isExistApplicationInSameClassLicense(ctrlFindPersonCard.PersonID, cbLicenseClasses.Text))
+            if (clsApplications.isExistApplicationInSameClassLicense(ctrlFindPersonCard.PersonID, cbLicenseClasses.Text))
             {
                 MessageBox.Show("Choose Another License Class, The Selected Person Aready Have an Active Application " +
                     "for the selected class with id [" + ctrlFindPersonCard.PersonID + "]", "Error",

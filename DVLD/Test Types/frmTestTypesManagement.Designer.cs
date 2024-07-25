@@ -94,12 +94,12 @@
             this.cmsTestTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmEditTestTypes});
             this.cmsTestTypes.Name = "cmsApplicationTypes";
-            this.cmsTestTypes.Size = new System.Drawing.Size(211, 56);
+            this.cmsTestTypes.Size = new System.Drawing.Size(176, 28);
             // 
             // tsmEditTestTypes
             // 
             this.tsmEditTestTypes.Name = "tsmEditTestTypes";
-            this.tsmEditTestTypes.Size = new System.Drawing.Size(210, 24);
+            this.tsmEditTestTypes.Size = new System.Drawing.Size(175, 24);
             this.tsmEditTestTypes.Text = "Edit Test Types";
             this.tsmEditTestTypes.Click += new System.EventHandler(this.tsmEditTestTypes_Click);
             // 

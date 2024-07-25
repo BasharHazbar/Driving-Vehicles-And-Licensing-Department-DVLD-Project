@@ -43,7 +43,5 @@ namespace DVLD
             EditTestTypes.ShowDialog();
             GetTestTypesList();
         }
-
-        
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DVLD_DataAccess_Layer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -113,6 +114,10 @@ namespace DVLD_Business_Layer
         }
 
 
+        public static DataTable GetInternationalLicensesListByPersonID(int PersonID)
+        {
+            return clsDataAccessInternationalLicenses.GetInternationalLicensesListByPersonID(PersonID);
+        }
         public static bool isExist(int InternationalLicenseID)
         {
             return clsDataAccessInternationalLicenses.isExist(InternationalLicenseID);

@@ -1,4 +1,5 @@
-﻿using DVLD_Business_Layer;
+﻿using DVLD.Licenses_History;
+using DVLD_Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -255,16 +256,12 @@ namespace DVLD.Local_Driving_Licenses
                 tsmScheduleTest.Enabled = false;
                 tsmIssueDrivingLicenseFirstTime.Enabled = true;
             }
-            /*
-                        MessageBox.Show("I am Here!!!!!!!!!!!!!1 "  + clsLicenses.isHasIssuedLicense((int)dgvApplicationsList.CurrentRow.Cells[1].Value));
-                        MessageBox.Show("I am Here!!!!!!!!!!!!!1 "  + (clsApplications.PassedTestCount((int)dgvApplicationsList.CurrentRow.Cells[0].Value) == 3));
-                        MessageBox.Show("I am Here!!!!!!!!!!!!!1 "  + (int)dgvApplicationsList.CurrentRow.Cells[1].Value);*/
+
 
 
             if (clsLicenses.isHasIssuedLicense((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value)
                 && clsApplications.PassedTestCount((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[0].Value) == 3)
             {
-                // MessageBox.Show("I am Here!!!!!!!!!!!!!1");
                 tsmIssueDrivingLicenseFirstTime.Enabled = false;
                 tsmEditApplication.Enabled = false;
                 tsmDeleteApplication.Enabled = false;
@@ -276,24 +273,24 @@ namespace DVLD.Local_Driving_Licenses
 
         private void tsmIssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)
         {
-/*            frmIssueDrivingLicense issueDrivingLicense = new frmIssueDrivingLicense((int)dgvApplicationsList.CurrentRow.Cells[1].Value,
-               (int)dgvApplicationsList.CurrentRow.Cells[2].Value, (int)dgvApplicationsList.CurrentRow.Cells[3].Value);
+            frmIssueDrivingLicense issueDrivingLicense = new frmIssueDrivingLicense((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[1].Value,
+               (int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value, (int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[3].Value);
 
             issueDrivingLicense.ShowDialog();
-            GetApplicationsListWithFilter();*/
+            GetApplicationsListWithFilter();
         }
 
         private void tsmShowLicense_Click(object sender, EventArgs e)
         {
-/*            frmLicenseDetails LicenseDetails = new frmLicenseDetails((int)dgvApplicationsList.CurrentRow.Cells[2].Value);
-            LicenseDetails.ShowDialog();*/
+            frmLicenseDetails LicenseDetails = new frmLicenseDetails((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value);
+            LicenseDetails.ShowDialog();
         }
 
         private void tsmShowPersonLicenseHistory_Click(object sender, EventArgs e)
         {
-/*            frmLicensesHistory LicensesHistory = new frmLicensesHistory((int)dgvApplicationsList.CurrentRow.Cells[1].Value);
+            frmLicensesHistory LicensesHistory = new frmLicensesHistory((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[1].Value);
 
-            LicensesHistory.ShowDialog();*/
+            LicensesHistory.ShowDialog();
         }
 
        

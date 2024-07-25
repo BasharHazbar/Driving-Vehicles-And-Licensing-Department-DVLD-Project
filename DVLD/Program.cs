@@ -1,5 +1,7 @@
 ﻿using DVLD.Application_Types;
+using DVLD.Licenses_History;
 using DVLD.Local_Driving_Licenses;
+using DVLD.People;
 using DVLD.Users;
 using System;
 using System.Collections.Generic;
@@ -19,7 +21,9 @@ namespace DVLD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            //Application.Run(new frmLicensesHistory(1));
+
+            Application.Run(new frmPeopleManagement());
         }
     }
 }

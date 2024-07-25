@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -212,6 +213,52 @@ namespace DVLD_DataAccess_Layer
                     return dt;
                 }*/
 
+        public static DataTable GetInternationalLicensesListByPersonID(int PersonID)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
+
+            string Query = @"  Select li.LicenseID as 'I.Lic ID', ilc.ApplicationID as 'App ID',
+                                    lc.ClassName as 'Class Name', 
+                                      convert(varchar,  ilc.IssueDate, 106)  as 'IssueDate Date',
+                                      convert(varchar,  ilc.ExpirationDate, 106)  as 'Expiration Date',
+                                    ilc.IsActive as 'Is Active' from InternationalLicenses ilc
+                                    join Drivers dr on dr.DriverID = ilc.DriverID
+									join Licenses li on li.LicenseID = ilc.IssuedUsingLocalLicenseID
+                                    join LicenseClasses lc on lc.LicenseClassID = lc.LicenseClassID
+                                    where dr.PersonID = @PersonID; ";
+
+
+            SqlCommand cmd = new SqlCommand(Query, connection);
+            cmd.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+        }
 
         public static bool isExist(int LocalDrivingLicenseApplicationID)
         {

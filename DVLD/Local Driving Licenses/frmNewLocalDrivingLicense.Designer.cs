@@ -78,9 +78,9 @@
             // 
             // ctrlFindPersonCard
             // 
-            this.ctrlFindPersonCard.Location = new System.Drawing.Point(37, 28);
+            this.ctrlFindPersonCard.Location = new System.Drawing.Point(37, 12);
             this.ctrlFindPersonCard.Name = "ctrlFindPersonCard";
-            this.ctrlFindPersonCard.Size = new System.Drawing.Size(910, 415);
+            this.ctrlFindPersonCard.Size = new System.Drawing.Size(910, 433);
             this.ctrlFindPersonCard.TabIndex = 50;
             // 
             // btnNext

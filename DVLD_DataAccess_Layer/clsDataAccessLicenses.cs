@@ -212,7 +212,7 @@ namespace DVLD_DataAccess_Layer
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
 
-            string Query = @" Select li.LicenseID as 'Lic ID', li.ApplicationID as 'App ID',
+            string Query = @" Select li.LicenseID as 'L.Lic ID', li.ApplicationID as 'App ID',
                                     lc.ClassName as 'Class Name', 
                                       convert(varchar,  li.IssueDate, 106)  as 'IssueDate Date',
                                       convert(varchar,  li.ExpirationDate, 106)  as 'Expiration Date',

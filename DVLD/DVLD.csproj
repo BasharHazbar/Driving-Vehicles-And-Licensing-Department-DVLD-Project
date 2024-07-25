@@ -65,6 +65,12 @@
     <Compile Include="Controls\ctrlApplicationCard.Designer.cs">
       <DependentUpon>ctrlApplicationCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlDriverLicenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlDriverLicenses.Designer.cs">
+      <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlFindLicenseCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,42 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses History\frmLicensesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses History\frmLicensesHistory.Designer.cs">
+      <DependentUpon>frmLicensesHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local Driving Licenses\frmIssueDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Local Driving Licenses\frmIssueDrivingLicense.Designer.cs">
+      <DependentUpon>frmIssueDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local Driving Licenses\frmLicenseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Local Driving Licenses\frmLicenseDetails.Designer.cs">
+      <DependentUpon>frmLicenseDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddEditPerson.Designer.cs">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmPeopleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPeopleManagement.Designer.cs">
+      <DependentUpon>frmPeopleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmPersonDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPersonDetails.Designer.cs">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Test Types\frmEditTestTypes.cs">
       <SubType>Form</SubType>
@@ -178,6 +220,9 @@
     <EmbeddedResource Include="Controls\ctrlApplicationCard.resx">
       <DependentUpon>ctrlApplicationCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlDriverLicenses.resx">
+      <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlFindLicenseCard.resx">
       <DependentUpon>ctrlFindLicenseCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +246,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses History\frmLicensesHistory.resx">
+      <DependentUpon>frmLicensesHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Local Driving Licenses\frmIssueDrivingLicense.resx">
+      <DependentUpon>frmIssueDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Local Driving Licenses\frmLicenseDetails.resx">
+      <DependentUpon>frmLicenseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddEditPerson.resx">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPeopleManagement.resx">
+      <DependentUpon>frmPeopleManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPersonDetails.resx">
+      <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Types\frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>
