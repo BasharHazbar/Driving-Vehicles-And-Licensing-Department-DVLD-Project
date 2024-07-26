@@ -129,9 +129,14 @@ namespace DVLD_Business_Layer
             return clsDataAccessLicenses.isExist(LicenseID);
         }
 
-        public static bool isHasIssuedLicense(int ApplicationID)
+        public static bool IsHasIssuedLicense(int ApplicationID)
         {
-            return clsDataAccessLicenses.isHasIssuedLicense(ApplicationID);
+            return clsDataAccessLicenses.IsHasIssuedLicense(ApplicationID);
+        }
+
+        public static bool IsOrdinarydrivinglicense(int LicenseID)
+        {
+            return clsDataAccessLicenses.IsOrdinarydrivinglicense(LicenseID);
         }
 
         public static DataTable GetLicensesInfo(int ApplicationID)

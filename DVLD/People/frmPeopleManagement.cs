@@ -137,12 +137,14 @@ namespace DVLD.People
         {
             frmPersonDetails frmPersonDetails = new frmPersonDetails((int)dgvPeopleList.CurrentRow.Cells[0].Value);
             frmPersonDetails.ShowDialog();
+            frmPersonDetails.Dispose();
         }
 
         private void pbAddNewPerson_Click(object sender, EventArgs e)
         {
             frmAddEditPerson frmAddEditPerson = new frmAddEditPerson(-1);
             frmAddEditPerson.ShowDialog();
+            frmAddEditPerson.Dispose();
             GetPeopleListWithFilter();
         }
 
@@ -150,6 +152,7 @@ namespace DVLD.People
         {
             frmPersonDetails frmPersonDetails = new frmPersonDetails((int)dgvPeopleList.CurrentRow.Cells[0].Value);
             frmPersonDetails.ShowDialog();
+            frmPersonDetails.Dispose();
             GetPeopleListWithFilter();
         }
 
@@ -157,6 +160,7 @@ namespace DVLD.People
         {
             frmAddEditPerson frmAddEditPerson = new frmAddEditPerson(-1);
             frmAddEditPerson.ShowDialog();
+            frmAddEditPerson.Dispose();
             GetPeopleListWithFilter();
         }
 
@@ -164,6 +168,7 @@ namespace DVLD.People
         {
             frmAddEditPerson frmAddEditPerson = new frmAddEditPerson((int)dgvPeopleList.CurrentRow.Cells[0].Value);
             frmAddEditPerson.ShowDialog();
+            frmAddEditPerson.Dispose();
             GetPeopleListWithFilter();
         }
 

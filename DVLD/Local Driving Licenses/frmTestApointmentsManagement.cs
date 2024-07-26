@@ -104,6 +104,7 @@ namespace DVLD.Local_Driving_Licenses
             frmAddEditLocalLicenseTestAppointments AddEditLocalLicenseTestAppointments = new
             frmAddEditLocalLicenseTestAppointments(-1, _ApplicationID, _TestTypeID, _IsRetakeTest);
             AddEditLocalLicenseTestAppointments.ShowDialog();
+            AddEditLocalLicenseTestAppointments.Dispose();
             GetTestAppoimentsList();
         }
 
@@ -118,6 +119,7 @@ namespace DVLD.Local_Driving_Licenses
             frmAddEditLocalLicenseTestAppointments AddEditLocalLicenseTestAppointments = new
             frmAddEditLocalLicenseTestAppointments((int)dgvTestAppointmentsList.CurrentRow.Cells[0].Value,_ApplicationID, _TestTypeID, _IsRetakeTest);
             AddEditLocalLicenseTestAppointments.ShowDialog();
+            AddEditLocalLicenseTestAppointments.Dispose();
             GetTestAppoimentsList();
             ctrlApplicationCard.LoadApplicationData(_ApplicationID);
         }
@@ -127,6 +129,7 @@ namespace DVLD.Local_Driving_Licenses
             frmTakeLocalDrivingLicenseTest TakeLocalDrivingLicenseTest = new frmTakeLocalDrivingLicenseTest((int)dgvTestAppointmentsList.CurrentRow.Cells[0].Value, _ApplicationID,
                 _TestTypeID, _IsRetakeTest);
             TakeLocalDrivingLicenseTest.ShowDialog();
+            TakeLocalDrivingLicenseTest.Dispose();
             GetTestAppoimentsList();
             ctrlApplicationCard.LoadApplicationData(_ApplicationID);
         }

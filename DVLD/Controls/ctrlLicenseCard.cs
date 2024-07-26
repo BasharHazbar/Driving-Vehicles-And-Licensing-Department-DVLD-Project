@@ -26,6 +26,7 @@ namespace DVLD.Controls
         public void LoadLicenseData(int ApplicationID)
         {
             _LicenseInfo = clsLicenses.GetLicensesInfo(ApplicationID).Rows[0];
+            
             FillLicenseData();
         }
 

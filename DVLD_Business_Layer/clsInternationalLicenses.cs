@@ -15,21 +15,20 @@ namespace DVLD_Business_Layer
 
         private enMode _Mode;
         public  int InternationalLicenseID {  get; set; } 
-
         public  int ApplicationID { get; set; }
-
         public  int DriverID { get; set; }
         public  int IssuedUsingLocalLicenseID { get; set; }
         public DateTime IssueDate { get; set; }
         public DateTime ExpirationDate { get; set; }
-        public  short IsActive { get; set; }
+        public  bool IsActive { get; set; }
         public  int CreatedByUserID { get; set; }
 
 
         private bool AddLInternationalLicense()
         {
-            return clsDataAccessInternationalLicenses.AddLInternationalLicense(this.ApplicationID,this.DriverID,
+            this.InternationalLicenseID = clsDataAccessInternationalLicenses.AddLInternationalLicense(this.ApplicationID,this.DriverID,
                 this.IssuedUsingLocalLicenseID,this.IssueDate,this.ExpirationDate,this.IsActive,this.CreatedByUserID);
+            return this.InternationalLicenseID != -1;
         }
 
 
@@ -48,14 +47,14 @@ namespace DVLD_Business_Layer
             this.IssuedUsingLocalLicenseID = -1;
             this.IssueDate = DateTime.Now;
             this.ExpirationDate = DateTime.Now;
-            this.IsActive = -1;
+            this.IsActive = true;
             this.CreatedByUserID = -1;
             _Mode = enMode.AddLInternationalLicense;
 
         }
 
         public clsInternationalLicenses(enMode Mode, int InternationalLicenseID,int ApplicationID,int DriverID,
-            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, short IsActive, int CreatedByUserID)
+            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, bool IsActive, int CreatedByUserID)
         {
             this.InternationalLicenseID = InternationalLicenseID;
             this.ApplicationID = ApplicationID;
@@ -76,7 +75,7 @@ namespace DVLD_Business_Layer
             int IssuedUsingLocalLicenseID = -1;
             DateTime IssueDate = DateTime.Now;
             DateTime ExpirationDate = DateTime.Now;
-            short IsActive = -1;
+            bool IsActive = true;
             int CreatedByUserID = -1;
 
             if (clsDataAccessInternationalLicenses.Find(InternationalLicenseID, ref ApplicationID, ref DriverID, ref IssuedUsingLocalLicenseID, ref IssueDate,

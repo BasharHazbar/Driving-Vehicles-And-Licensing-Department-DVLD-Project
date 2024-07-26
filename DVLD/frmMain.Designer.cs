@@ -232,6 +232,7 @@
             this.tsmUsersManagement.Name = "tsmUsersManagement";
             this.tsmUsersManagement.Size = new System.Drawing.Size(145, 76);
             this.tsmUsersManagement.Text = "&Users";
+            this.tsmUsersManagement.Click += new System.EventHandler(this.tsmUsersManagement_Click);
             // 
             // accountSettingsToolStripMenuItem
             // 
@@ -251,12 +252,14 @@
             this.tsmCurrentUser.Name = "tsmCurrentUser";
             this.tsmCurrentUser.Size = new System.Drawing.Size(250, 32);
             this.tsmCurrentUser.Text = "Current User";
+            this.tsmCurrentUser.Click += new System.EventHandler(this.tsmCurrentUser_Click);
             // 
             // tsmChangePassword
             // 
             this.tsmChangePassword.Name = "tsmChangePassword";
             this.tsmChangePassword.Size = new System.Drawing.Size(250, 32);
             this.tsmChangePassword.Text = "Change Password";
+            this.tsmChangePassword.Click += new System.EventHandler(this.tsmChangePassword_Click);
             // 
             // tsmLogout
             // 

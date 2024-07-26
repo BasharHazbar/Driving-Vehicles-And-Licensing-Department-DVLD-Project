@@ -1,6 +1,7 @@
 ﻿using DVLD.Application_Types;
 using DVLD.Local_Driving_Licenses;
 using DVLD.People;
+using DVLD.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace DVLD
             frmLocalLicenseApplicationsManagement LocalLicenseApplicationsManagement
                 = new frmLocalLicenseApplicationsManagement();
             LocalLicenseApplicationsManagement.ShowDialog();
+            LocalLicenseApplicationsManagement.Dispose();
 
         }
 
@@ -38,30 +40,56 @@ namespace DVLD
             frmNewLocalDrivingLicense LocalDrivingLicense = new 
                 frmNewLocalDrivingLicense(-1,(byte)clsGlobalSettings.enApplicationTypes.NewLocalDrivingLicense);
             LocalDrivingLicense.ShowDialog();
+            LocalDrivingLicense.Dispose();
         }
 
         private void tsmDriversManagement_Click(object sender, EventArgs e)
         {
             frmDriversManagement DriversManagement = new frmDriversManagement();
             DriversManagement.ShowDialog();
+            DriversManagement.Dispose();
         }
 
         private void tsmManageApplicationTypes_Click(object sender, EventArgs e)
         {
             frmApplicationTypesManagement ApplicationTypesManagement = new frmApplicationTypesManagement();
             ApplicationTypesManagement.ShowDialog();
+            ApplicationTypesManagement.Dispose();
         }
 
         private void tsmManageTestTypes_Click(object sender, EventArgs e)
         {
             frmTestTypesManagement  TestTypesManagement = new frmTestTypesManagement();
             TestTypesManagement.ShowDialog();
+            TestTypesManagement.Dispose();
         }
 
         private void tsmPeopleManagement_Click(object sender, EventArgs e)
         {
             frmPeopleManagement PeopleManagement = new frmPeopleManagement();   
             PeopleManagement.ShowDialog();
+            PeopleManagement.Dispose(); 
+        }
+
+        private void tsmUsersManagement_Click(object sender, EventArgs e)
+        {
+            frmUsersManagement UsersManagement = new frmUsersManagement();
+            UsersManagement.ShowDialog();
+            UsersManagement.Dispose();
+        }
+
+        private void tsmCurrentUser_Click(object sender, EventArgs e)
+        {
+            frmUserDetails UserDetails = new frmUserDetails(clsGlobalSettings.User.UserID);
+            UserDetails.ShowDialog();
+            UserDetails.Dispose();
+        }
+
+        private void tsmChangePassword_Click(object sender, EventArgs e)
+        {
+            frmChangePassword ChangePassword = new frmChangePassword(clsGlobalSettings.User.UserID);
+            ChangePassword.ShowDialog();
+            ChangePassword.Dispose();
         }
     }
 }

@@ -104,6 +104,7 @@ namespace DVLD.Controls
             frmAddEditPerson AddEditPerson = new frmAddEditPerson(-1);
             AddEditPerson.DataBack += frmAddEditPerson_dataBack;
             AddEditPerson.ShowDialog();
+            AddEditPerson.Dispose();
         }
 
         private void ctrlFindPersonCard_Load(object sender, EventArgs e)

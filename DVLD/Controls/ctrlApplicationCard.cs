@@ -101,7 +101,8 @@ namespace DVLD.Controls
         {
 
             frmPersonDetails frmPersonDetails = new frmPersonDetails((int)_ApplicationInfo["PersonID"]);
-            frmPersonDetails.ShowDialog(); 
+            frmPersonDetails.ShowDialog();
+            frmPersonDetails.Dispose();
 
         }
 
@@ -109,6 +110,7 @@ namespace DVLD.Controls
         {
             frmLicenseDetails LicenseDetails = new frmLicenseDetails(_ApplicationID);
             LicenseDetails.ShowDialog();
+            LicenseDetails.Dispose();
         }
     }
 }

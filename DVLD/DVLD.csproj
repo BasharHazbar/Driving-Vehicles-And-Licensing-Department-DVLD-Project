@@ -119,6 +119,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="International Driving License\frmIssueInternationalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International Driving License\frmIssueInternationalDrivingLicense.Designer.cs">
+      <DependentUpon>frmIssueInternationalDrivingLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses History\frmLicensesHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,12 @@
     <Compile Include="Users\frmAddEditUser.Designer.cs">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +276,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International Driving License\frmIssueInternationalDrivingLicense.resx">
+      <DependentUpon>frmIssueInternationalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses History\frmLicensesHistory.resx">
       <DependentUpon>frmLicensesHistory.cs</DependentUpon>
@@ -319,6 +334,9 @@
     </Compile>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -387,5 +405,6 @@
   <ItemGroup>
     <None Include="Resources\Add User.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

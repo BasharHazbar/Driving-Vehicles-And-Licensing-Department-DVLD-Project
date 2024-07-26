@@ -11,7 +11,7 @@ namespace DVLD_DataAccess_Layer
     public class clsDataAccessInternationalLicenses
     {
         public static bool Find(int InternationalLicenseID, ref int ApplicationID,ref int DriverID,
-            ref int IssuedUsingLocalLicenseID, ref DateTime IssueDate,ref DateTime ExpirationDate, ref short IsActive, ref int CreatedByUserID)
+            ref int IssuedUsingLocalLicenseID, ref DateTime IssueDate,ref DateTime ExpirationDate, ref bool IsActive, ref int CreatedByUserID)
         {
             bool isFind = false;
 
@@ -38,7 +38,7 @@ namespace DVLD_DataAccess_Layer
                     IssuedUsingLocalLicenseID = (int)reader["IssuedUsingLocalLicenseID"];
                     IssueDate = (DateTime)reader["IssueDate"];
                     ExpirationDate = (DateTime)reader["ExpirationDate"];
-                    IsActive = (short)reader["IsActive"];
+                    IsActive = (bool)reader["IsActive"];
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                 }
 
@@ -56,8 +56,8 @@ namespace DVLD_DataAccess_Layer
             return isFind;
         }
 
-        public static bool AddLInternationalLicense(int ApplicationID, int DriverID,
-            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, short IsActive, int CreatedByUserID)
+        public static int AddLInternationalLicense(int ApplicationID, int DriverID,
+            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, bool IsActive, int CreatedByUserID)
         {
 
 
@@ -114,12 +114,12 @@ namespace DVLD_DataAccess_Layer
                 connection.Close();
 
             }
-            return ID != -1;
+            return ID;
         }
 
 
         public static bool UpdateInternationalLicenses(int InternationalLicenseID, int ApplicationID, int DriverID,
-            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, short IsActive, int CreatedByUserID)
+            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, bool IsActive, int CreatedByUserID)
         {
 
             int RowEffects = 0;

@@ -137,6 +137,7 @@ namespace DVLD.Controls
                 frmAddEditPerson AddEditPerson = new frmAddEditPerson(_Person.PersonID);
                 AddEditPerson.DataBack += frmAddEditPerson_dataBack;
                 AddEditPerson.ShowDialog();
+                AddEditPerson.Dispose();
             }
             else
             {

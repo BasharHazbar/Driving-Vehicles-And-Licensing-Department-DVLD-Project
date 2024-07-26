@@ -120,6 +120,7 @@ namespace DVLD.Local_Driving_Licenses
             frmNewLocalDrivingLicense frmNewLocalDrivingLicense = new frmNewLocalDrivingLicense(-1,
                 (byte)clsGlobalSettings.enApplicationTypes.NewLocalDrivingLicense);
             frmNewLocalDrivingLicense.ShowDialog();
+            frmNewLocalDrivingLicense.Dispose();
             GetApplicationsListWithFilter();
         }
 
@@ -131,6 +132,7 @@ namespace DVLD.Local_Driving_Licenses
                 frmNewLocalDrivingLicense(((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value),
                 (byte)clsGlobalSettings.enApplicationTypes.NewLocalDrivingLicense);
             frmNewLocalDrivingLicense.ShowDialog();
+            frmNewLocalDrivingLicense.Dispose();
             GetApplicationsListWithFilter();
         }
 
@@ -186,6 +188,7 @@ namespace DVLD.Local_Driving_Licenses
             frmLocalLicenseApplicationDetails LocalLicenseApplicationDetails = new
                 frmLocalLicenseApplicationDetails(((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value));
             LocalLicenseApplicationDetails.ShowDialog();
+            LocalLicenseApplicationDetails.Dispose();
         }
 
         private void tsmShowApplicationDetails_Click(object sender, EventArgs e)
@@ -193,6 +196,7 @@ namespace DVLD.Local_Driving_Licenses
             frmLocalLicenseApplicationDetails LocalLicenseApplicationDetails = new
                 frmLocalLicenseApplicationDetails(((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value));
             LocalLicenseApplicationDetails.ShowDialog();
+            LocalLicenseApplicationDetails.Dispose();
         }
 
         private void tsmVisionTest_Click(object sender, EventArgs e)
@@ -202,6 +206,7 @@ namespace DVLD.Local_Driving_Licenses
                 , (byte)clsGlobalSettings.enTestTypes.VisionTest);
 
             TestApointmentsManagement.ShowDialog();
+            TestApointmentsManagement.Dispose();
             GetApplicationsListWithFilter();
 
         }
@@ -213,6 +218,7 @@ namespace DVLD.Local_Driving_Licenses
                 , (byte)clsGlobalSettings.enTestTypes.WrittenTest);
 
             TestApointmentsManagement.ShowDialog();
+            TestApointmentsManagement.Dispose();
             GetApplicationsListWithFilter();
         }
         private void tsmStreetTest_Click(object sender, EventArgs e)
@@ -222,6 +228,7 @@ namespace DVLD.Local_Driving_Licenses
                 , (byte)clsGlobalSettings.enTestTypes.StreetTest);
 
             TestApointmentsManagement.ShowDialog();
+            TestApointmentsManagement.Dispose();
             GetApplicationsListWithFilter();
         }
 
@@ -259,7 +266,7 @@ namespace DVLD.Local_Driving_Licenses
 
 
 
-            if (clsLicenses.isHasIssuedLicense((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value)
+            if (clsLicenses.IsHasIssuedLicense((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value)
                 && clsApplications.PassedTestCount((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[0].Value) == 3)
             {
                 tsmIssueDrivingLicenseFirstTime.Enabled = false;
@@ -277,6 +284,7 @@ namespace DVLD.Local_Driving_Licenses
                (int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value, (int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[3].Value);
 
             issueDrivingLicense.ShowDialog();
+            issueDrivingLicense.Dispose();
             GetApplicationsListWithFilter();
         }
 
@@ -284,6 +292,7 @@ namespace DVLD.Local_Driving_Licenses
         {
             frmLicenseDetails LicenseDetails = new frmLicenseDetails((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[2].Value);
             LicenseDetails.ShowDialog();
+            LicenseDetails.Dispose();
         }
 
         private void tsmShowPersonLicenseHistory_Click(object sender, EventArgs e)
@@ -291,6 +300,7 @@ namespace DVLD.Local_Driving_Licenses
             frmLicensesHistory LicensesHistory = new frmLicensesHistory((int)dgvLocalLicenseApplicationsList.CurrentRow.Cells[1].Value);
 
             LicensesHistory.ShowDialog();
+            LicensesHistory.Dispose();
         }
 
        

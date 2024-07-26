@@ -113,6 +113,7 @@ namespace DVLD.Users
         {
             frmUserDetails UserDetail = new frmUserDetails((int)dgvUsersList.CurrentRow.Cells[0].Value);
             UserDetail.ShowDialog();
+            UserDetail.Dispose();
         }
 
         private void cbFindByIsActive_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,12 +125,14 @@ namespace DVLD.Users
         {
             frmUserDetails UserDetail = new frmUserDetails((int)dgvUsersList.CurrentRow.Cells[0].Value);
             UserDetail.ShowDialog();
+            UserDetail.Dispose();
         }
 
         private void tsmChangePassword_Click(object sender, EventArgs e)
         {
-/*            frmChangePassword frmChangePassword = new frmChangePassword((int)dgvUsersList.CurrentRow.Cells[0].Value);
-            frmChangePassword.ShowDialog();*/
+            frmChangePassword ChangePassword = new frmChangePassword((int)dgvUsersList.CurrentRow.Cells[0].Value);
+            ChangePassword.ShowDialog();
+            ChangePassword.Dispose();
         }
 
         private void tsmDeleteUser_Click(object sender, EventArgs e)
@@ -160,6 +163,7 @@ namespace DVLD.Users
         {
             frmAddEditUser frmAddEditUser = new frmAddEditUser((int)dgvUsersList.CurrentRow.Cells[0].Value);
             frmAddEditUser.ShowDialog();
+            frmAddEditUser.Dispose();
             GetUsersListWithFilter();
         }
 
@@ -174,6 +178,7 @@ namespace DVLD.Users
         {
             frmAddEditUser frmAddEditUser = new frmAddEditUser(-1);
             frmAddEditUser.ShowDialog();
+            frmAddEditUser.Dispose();
             GetUsersListWithFilter();
         }
     }

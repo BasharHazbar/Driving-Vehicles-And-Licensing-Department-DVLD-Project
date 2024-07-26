@@ -371,8 +371,7 @@ namespace DVLD_DataAccess_Layer
             return isExist;
         }
 
-
-        public static bool isHasIssuedLicense(int ApplicationID)
+        public static bool IsHasIssuedLicense(int ApplicationID)
         {
             bool isExist = false;
 
@@ -385,6 +384,44 @@ namespace DVLD_DataAccess_Layer
             SqlCommand cmd = new SqlCommand(query, connection);
 
             cmd.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    isExist = true;
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                isExist = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return isExist;
+        }
+
+        public static bool IsOrdinarydrivinglicense(int LicenseID)
+        {
+            bool isExist = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
+
+            string query = @"select * from Licenses li
+                                where LicenseID = @LicenseID and LicenseClassID = 3;";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.Parameters.AddWithValue("@LicenseID", LicenseID);
 
             try
             {

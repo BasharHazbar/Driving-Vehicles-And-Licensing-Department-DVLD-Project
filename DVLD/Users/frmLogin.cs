@@ -27,6 +27,7 @@ namespace DVLD.Users
                 clsGlobalSettings.User = User;
                 frmMain Main = new frmMain();
                 Main.ShowDialog();
+                Main.Dispose();
 
             }
             else if (User == null)

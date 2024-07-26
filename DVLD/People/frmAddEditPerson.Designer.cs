@@ -257,7 +257,7 @@
             this.lbMode.AutoSize = true;
             this.lbMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMode.ForeColor = System.Drawing.Color.Red;
-            this.lbMode.Location = new System.Drawing.Point(433, 23);
+            this.lbMode.Location = new System.Drawing.Point(416, 23);
             this.lbMode.Name = "lbMode";
             this.lbMode.Size = new System.Drawing.Size(149, 29);
             this.lbMode.TabIndex = 63;

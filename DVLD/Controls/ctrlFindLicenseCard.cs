@@ -13,42 +13,66 @@ namespace DVLD.Controls
 {
     public partial class ctrlFindLicenseCard : UserControl
     {
-        private int _LicenseID = -1;
+        clsLicenses _License;
         public ctrlFindLicenseCard()
         {
             InitializeComponent();
         }
 
-        public int LicenseID
+/*        public int LicenseID
         {
             get { return _LicenseID; }
         }
 
+        public int DriverID
+        {
+            get { return _License.DriverID; }
+        }
+*/
 
         void LoadLicenseData()
         {
             if (int.TryParse(tbFind.Text, out int LicenseID))
             {
-                clsLicenses License = clsLicenses.Find(LicenseID);
-
-                if (License == null)
+                _License = clsLicenses.Find(LicenseID);
+                
+                if (_License == null)
                 {
                     MessageBox.Show("NO License With ID = " + LicenseID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     ctrlLicenseCard.ResetLicenseData();
                     return;
                 }
-
-                if (!License.IsActive)
+/*
+                if (!_License.IsActive)
                 {
                     MessageBox.Show("This License With ID = " + LicenseID + " Not Active", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    _LicenseID = -1;
                     ctrlLicenseCard.ResetLicenseData();
                     return;
 
                 }
 
-                ctrlLicenseCard.LoadLicenseData(License.ApplicationID);
+                if (_License.ExpirationDate <= DateTime.Now)
+                {
+                    MessageBox.Show($"This License with ID = {LicenseID} is already expired.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ctrlLicenseCard.ResetLicenseData();
+                    _LicenseID = -1;
+                    return;
+                }
 
-                _LicenseID = License.LicenseID;
+                if (!clsLicenses.IsOrdinarydrivinglicense(_License.DriverID,_License.LicenseClassID))
+                {
+                    MessageBox.Show("This License  with ID = " + LicenseID + " It Not Ordinary Drivig", "Error", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ctrlLicenseCard.ResetLicenseData();
+                    _LicenseID = -1;
+                    return;
+                }*/
+
+                ctrlLicenseCard.LoadLicenseData(_License.ApplicationID);
+
+ //               _LicenseID = _License.LicenseID;
             }
         }
         private void pbFindLicense_Click(object sender, EventArgs e)
