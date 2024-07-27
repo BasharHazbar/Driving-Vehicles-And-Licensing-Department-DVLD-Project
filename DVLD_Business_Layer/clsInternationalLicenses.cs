@@ -86,6 +86,24 @@ namespace DVLD_Business_Layer
                 return null;
         }
 
+        public static clsInternationalLicenses FindByDriverID(int DriverID)
+        {
+            int InternationalLicenseID = -1;
+            int ApplicationID = -1;
+            DateTime IssueDate = DateTime.Now;
+            DateTime ExpirationDate = DateTime.Now;
+            int IssuedUsingLocalLicenseID = -1;
+            bool IsActive = true;
+            int CreatedByUserID = -1;
+
+            if (clsDataAccessInternationalLicenses.FindByDriverID(DriverID, ref InternationalLicenseID, ref ApplicationID, ref IssuedUsingLocalLicenseID,
+                ref IssueDate, ref ExpirationDate, ref IsActive, ref CreatedByUserID))
+                return new clsInternationalLicenses(enMode.UpdateInternationalLicenses, InternationalLicenseID, ApplicationID,
+                    DriverID, IssuedUsingLocalLicenseID, IssueDate, ExpirationDate, IsActive, CreatedByUserID);
+            else
+                return null;
+        }
+
         public bool Save()
         {
 
@@ -113,13 +131,28 @@ namespace DVLD_Business_Layer
         }
 
 
+        public static DataTable GetIntLicensesList()
+        {
+            return clsDataAccessInternationalLicenses.GetIntLicensesList();
+        }
+
         public static DataTable GetInternationalLicensesListByPersonID(int PersonID)
         {
             return clsDataAccessInternationalLicenses.GetInternationalLicensesListByPersonID(PersonID);
         }
+
+        public static DataTable GetInternationalLicensesInfo(int InternationalLicenseID)
+        {
+            return clsDataAccessInternationalLicenses.GetInternationalLicensesInfo(InternationalLicenseID);
+        }
         public static bool isExist(int InternationalLicenseID)
         {
             return clsDataAccessInternationalLicenses.isExist(InternationalLicenseID);
+        }
+
+        public static bool isExistByDriverID(int DriverID)
+        {
+            return clsDataAccessInternationalLicenses.isExistByDriverID(DriverID);
         }
 
         public static bool Delete(int InternationalLicenseID)

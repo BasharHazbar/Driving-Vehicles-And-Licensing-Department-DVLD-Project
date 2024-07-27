@@ -24,10 +24,12 @@ namespace DVLD
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLicensesHistory(1));
             //Application.Run(new frmPeopleManagement()); 
-            //Application.Run(new frmLogin());
+            //Application.Run(new frmInternationalLicenseManagement());
+            Application.Run(new frmLogin());
+            //Application.Run(new frmTest());
             // Application.Run(new frmUsersManagement());
 
-            Application.Run(new frmIssueInternationalDrivingLicense());
+            // Application.Run(new frmIssueInternationalDrivingLicense());
         }
     }
 }

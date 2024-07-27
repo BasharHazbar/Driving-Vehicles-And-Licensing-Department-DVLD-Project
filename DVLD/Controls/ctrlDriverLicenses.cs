@@ -1,4 +1,6 @@
-﻿using DVLD_Business_Layer;
+﻿using DVLD.International_Driving_License;
+using DVLD.Local_Driving_Licenses;
+using DVLD_Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +22,7 @@ namespace DVLD.Controls
             InitializeComponent();
         }
 
+
         public void LoadDriverLicensesData(int PersonID)
         {
             _LocalLicensesList = clsLicenses.GetLicensesListByPersonID(PersonID);
@@ -36,6 +39,33 @@ namespace DVLD.Controls
 
         }
 
+        private void dgvLocalDrivingLicensesList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmLicenseDetails LicenseDetails = new frmLicenseDetails((int)dgvLocalDrivingLicensesList.CurrentRow.Cells[1].Value);
+            LicenseDetails.ShowDialog();
+            LicenseDetails.Dispose();
+        }
+
+        private void tsmShowLocalLicenseDetails_Click(object sender, EventArgs e)
+        {
+            frmLicenseDetails LicenseDetails = new frmLicenseDetails((int)dgvLocalDrivingLicensesList.CurrentRow.Cells[1].Value);
+            LicenseDetails.ShowDialog();
+            LicenseDetails.Dispose();
+        }
+
+        private void tsmShowIntLicenseDetails_Click(object sender, EventArgs e)
+        {
+            frmIntLicenseDetails LicenseDetails = new frmIntLicenseDetails((int)dgvInternationalDrivingLicensesList.CurrentRow.Cells[0].Value);
+            LicenseDetails.ShowDialog();
+            LicenseDetails.Dispose();
+        }
+
+        private void dgvInternationalDrivingLicensesList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmIntLicenseDetails LicenseDetails = new frmIntLicenseDetails((int)dgvInternationalDrivingLicensesList.CurrentRow.Cells[0].Value);
+            LicenseDetails.ShowDialog();
+            LicenseDetails.Dispose();
+        }
 
 
     }

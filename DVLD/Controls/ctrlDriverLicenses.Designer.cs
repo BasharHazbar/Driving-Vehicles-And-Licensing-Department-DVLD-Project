@@ -28,22 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbDriverLicenses = new System.Windows.Forms.GroupBox();
             this.tcDriverLicense = new System.Windows.Forms.TabControl();
             this.tpLocalDrivingLicenses = new System.Windows.Forms.TabPage();
             this.lbLocalRecordsCountValue = new System.Windows.Forms.Label();
             this.dgvLocalDrivingLicensesList = new System.Windows.Forms.DataGridView();
+            this.cmsShowLocalLicenseDetails = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowLocalLicenseDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.lbLocalRecordsCount = new System.Windows.Forms.Label();
             this.tpInternationalDrivingLicenses = new System.Windows.Forms.TabPage();
             this.lbInternationalRecordsCountValue = new System.Windows.Forms.Label();
             this.lbInternationalRecordsCount = new System.Windows.Forms.Label();
             this.dgvInternationalDrivingLicensesList = new System.Windows.Forms.DataGridView();
+            this.cmsShowIntLicenseDetails = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowIntLicenseDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.gbDriverLicenses.SuspendLayout();
             this.tcDriverLicense.SuspendLayout();
             this.tpLocalDrivingLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicensesList)).BeginInit();
+            this.cmsShowLocalLicenseDetails.SuspendLayout();
             this.tpInternationalDrivingLicenses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternationalDrivingLicensesList)).BeginInit();
+            this.cmsShowIntLicenseDetails.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDriverLicenses
@@ -97,6 +104,7 @@
             this.dgvLocalDrivingLicensesList.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvLocalDrivingLicensesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvLocalDrivingLicensesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalDrivingLicensesList.ContextMenuStrip = this.cmsShowLocalLicenseDetails;
             this.dgvLocalDrivingLicensesList.GridColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvLocalDrivingLicensesList.Location = new System.Drawing.Point(27, 14);
             this.dgvLocalDrivingLicensesList.Name = "dgvLocalDrivingLicensesList";
@@ -105,6 +113,22 @@
             this.dgvLocalDrivingLicensesList.RowTemplate.Height = 24;
             this.dgvLocalDrivingLicensesList.Size = new System.Drawing.Size(1018, 229);
             this.dgvLocalDrivingLicensesList.TabIndex = 37;
+            this.dgvLocalDrivingLicensesList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLocalDrivingLicensesList_CellDoubleClick);
+            // 
+            // cmsShowLocalLicenseDetails
+            // 
+            this.cmsShowLocalLicenseDetails.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsShowLocalLicenseDetails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowLocalLicenseDetails});
+            this.cmsShowLocalLicenseDetails.Name = "cmsShowLocalLicenseDetails";
+            this.cmsShowLocalLicenseDetails.Size = new System.Drawing.Size(256, 28);
+            // 
+            // tsmShowLocalLicenseDetails
+            // 
+            this.tsmShowLocalLicenseDetails.Name = "tsmShowLocalLicenseDetails";
+            this.tsmShowLocalLicenseDetails.Size = new System.Drawing.Size(255, 24);
+            this.tsmShowLocalLicenseDetails.Text = "Show Local License Details";
+            this.tsmShowLocalLicenseDetails.Click += new System.EventHandler(this.tsmShowLocalLicenseDetails_Click);
             // 
             // lbLocalRecordsCount
             // 
@@ -156,6 +180,7 @@
             this.dgvInternationalDrivingLicensesList.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvInternationalDrivingLicensesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvInternationalDrivingLicensesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInternationalDrivingLicensesList.ContextMenuStrip = this.cmsShowIntLicenseDetails;
             this.dgvInternationalDrivingLicensesList.GridColor = System.Drawing.SystemColors.WindowFrame;
             this.dgvInternationalDrivingLicensesList.Location = new System.Drawing.Point(27, 15);
             this.dgvInternationalDrivingLicensesList.Name = "dgvInternationalDrivingLicensesList";
@@ -164,6 +189,22 @@
             this.dgvInternationalDrivingLicensesList.RowTemplate.Height = 24;
             this.dgvInternationalDrivingLicensesList.Size = new System.Drawing.Size(1018, 229);
             this.dgvInternationalDrivingLicensesList.TabIndex = 38;
+            this.dgvInternationalDrivingLicensesList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInternationalDrivingLicensesList_CellDoubleClick);
+            // 
+            // cmsShowIntLicenseDetails
+            // 
+            this.cmsShowIntLicenseDetails.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsShowIntLicenseDetails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowIntLicenseDetails});
+            this.cmsShowIntLicenseDetails.Name = "cmsShowIntLicenseDetails";
+            this.cmsShowIntLicenseDetails.Size = new System.Drawing.Size(217, 56);
+            // 
+            // tsmShowIntLicenseDetails
+            // 
+            this.tsmShowIntLicenseDetails.Name = "tsmShowIntLicenseDetails";
+            this.tsmShowIntLicenseDetails.Size = new System.Drawing.Size(216, 24);
+            this.tsmShowIntLicenseDetails.Text = "Show License Details";
+            this.tsmShowIntLicenseDetails.Click += new System.EventHandler(this.tsmShowIntLicenseDetails_Click);
             // 
             // ctrlDriverLicenses
             // 
@@ -177,9 +218,11 @@
             this.tpLocalDrivingLicenses.ResumeLayout(false);
             this.tpLocalDrivingLicenses.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicensesList)).EndInit();
+            this.cmsShowLocalLicenseDetails.ResumeLayout(false);
             this.tpInternationalDrivingLicenses.ResumeLayout(false);
             this.tpInternationalDrivingLicenses.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternationalDrivingLicensesList)).EndInit();
+            this.cmsShowIntLicenseDetails.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,5 +239,9 @@
         private System.Windows.Forms.Label lbLocalRecordsCount;
         private System.Windows.Forms.Label lbInternationalRecordsCountValue;
         private System.Windows.Forms.Label lbInternationalRecordsCount;
+        private System.Windows.Forms.ContextMenuStrip cmsShowLocalLicenseDetails;
+        private System.Windows.Forms.ContextMenuStrip cmsShowIntLicenseDetails;
+        private System.Windows.Forms.ToolStripMenuItem tsmShowLocalLicenseDetails;
+        private System.Windows.Forms.ToolStripMenuItem tsmShowIntLicenseDetails;
     }
 }

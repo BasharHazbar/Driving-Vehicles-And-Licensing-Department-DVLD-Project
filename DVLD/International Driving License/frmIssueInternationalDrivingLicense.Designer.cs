@@ -35,9 +35,9 @@
             this.lbExpirationData = new System.Windows.Forms.Label();
             this.lbExpirationDataValue = new System.Windows.Forms.Label();
             this.lbLocalLicenseID = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbILicenseID = new System.Windows.Forms.Label();
-            this.lbILicenseIDValue = new System.Windows.Forms.Label();
+            this.lbLocalLicenseIDValue = new System.Windows.Forms.Label();
+            this.lbIntLicenseID = new System.Windows.Forms.Label();
+            this.lbIntLicenseIDValue = new System.Windows.Forms.Label();
             this.lbFees = new System.Windows.Forms.Label();
             this.lbFeesValue = new System.Windows.Forms.Label();
             this.lbIssueDate = new System.Windows.Forms.Label();
@@ -78,9 +78,9 @@
             this.gbApplicationInfo.Controls.Add(this.lbExpirationData);
             this.gbApplicationInfo.Controls.Add(this.lbExpirationDataValue);
             this.gbApplicationInfo.Controls.Add(this.lbLocalLicenseID);
-            this.gbApplicationInfo.Controls.Add(this.label6);
-            this.gbApplicationInfo.Controls.Add(this.lbILicenseID);
-            this.gbApplicationInfo.Controls.Add(this.lbILicenseIDValue);
+            this.gbApplicationInfo.Controls.Add(this.lbLocalLicenseIDValue);
+            this.gbApplicationInfo.Controls.Add(this.lbIntLicenseID);
+            this.gbApplicationInfo.Controls.Add(this.lbIntLicenseIDValue);
             this.gbApplicationInfo.Controls.Add(this.lbFees);
             this.gbApplicationInfo.Controls.Add(this.lbFeesValue);
             this.gbApplicationInfo.Controls.Add(this.lbIssueDate);
@@ -147,35 +147,35 @@
             this.lbLocalLicenseID.TabIndex = 32;
             this.lbLocalLicenseID.Text = "Local License ID:";
             // 
-            // label6
+            // lbLocalLicenseIDValue
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(671, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 20);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "[????]";
+            this.lbLocalLicenseIDValue.AutoSize = true;
+            this.lbLocalLicenseIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLocalLicenseIDValue.Location = new System.Drawing.Point(671, 80);
+            this.lbLocalLicenseIDValue.Name = "lbLocalLicenseIDValue";
+            this.lbLocalLicenseIDValue.Size = new System.Drawing.Size(61, 20);
+            this.lbLocalLicenseIDValue.TabIndex = 33;
+            this.lbLocalLicenseIDValue.Text = "[????]";
             // 
-            // lbILicenseID
+            // lbIntLicenseID
             // 
-            this.lbILicenseID.AutoSize = true;
-            this.lbILicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbILicenseID.Location = new System.Drawing.Point(471, 44);
-            this.lbILicenseID.Name = "lbILicenseID";
-            this.lbILicenseID.Size = new System.Drawing.Size(132, 20);
-            this.lbILicenseID.TabIndex = 30;
-            this.lbILicenseID.Text = "I.L.License ID:";
+            this.lbIntLicenseID.AutoSize = true;
+            this.lbIntLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIntLicenseID.Location = new System.Drawing.Point(471, 44);
+            this.lbIntLicenseID.Name = "lbIntLicenseID";
+            this.lbIntLicenseID.Size = new System.Drawing.Size(132, 20);
+            this.lbIntLicenseID.TabIndex = 30;
+            this.lbIntLicenseID.Text = "I.L.License ID:";
             // 
-            // lbILicenseIDValue
+            // lbIntLicenseIDValue
             // 
-            this.lbILicenseIDValue.AutoSize = true;
-            this.lbILicenseIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbILicenseIDValue.Location = new System.Drawing.Point(671, 44);
-            this.lbILicenseIDValue.Name = "lbILicenseIDValue";
-            this.lbILicenseIDValue.Size = new System.Drawing.Size(61, 20);
-            this.lbILicenseIDValue.TabIndex = 31;
-            this.lbILicenseIDValue.Text = "[????]";
+            this.lbIntLicenseIDValue.AutoSize = true;
+            this.lbIntLicenseIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIntLicenseIDValue.Location = new System.Drawing.Point(671, 44);
+            this.lbIntLicenseIDValue.Name = "lbIntLicenseIDValue";
+            this.lbIntLicenseIDValue.Size = new System.Drawing.Size(61, 20);
+            this.lbIntLicenseIDValue.TabIndex = 31;
+            this.lbIntLicenseIDValue.Text = "[????]";
             // 
             // lbFees
             // 
@@ -296,7 +296,7 @@
             // 
             this.pbFindLicense.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbFindLicense.Image = global::DVLD.Properties.Resources.Find_Person;
-            this.pbFindLicense.Location = new System.Drawing.Point(394, 34);
+            this.pbFindLicense.Location = new System.Drawing.Point(413, 34);
             this.pbFindLicense.Name = "pbFindLicense";
             this.pbFindLicense.Size = new System.Drawing.Size(74, 42);
             this.pbFindLicense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -307,7 +307,7 @@
             // tbFind
             // 
             this.tbFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFind.Location = new System.Drawing.Point(141, 42);
+            this.tbFind.Location = new System.Drawing.Point(160, 42);
             this.tbFind.Name = "tbFind";
             this.tbFind.Size = new System.Drawing.Size(233, 27);
             this.tbFind.TabIndex = 2;
@@ -397,9 +397,9 @@
         private System.Windows.Forms.Label lbExpirationData;
         private System.Windows.Forms.Label lbExpirationDataValue;
         private System.Windows.Forms.Label lbLocalLicenseID;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lbILicenseID;
-        private System.Windows.Forms.Label lbILicenseIDValue;
+        private System.Windows.Forms.Label lbLocalLicenseIDValue;
+        private System.Windows.Forms.Label lbIntLicenseID;
+        private System.Windows.Forms.Label lbIntLicenseIDValue;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnIssueLicense;
         private System.Windows.Forms.GroupBox gbFilter;

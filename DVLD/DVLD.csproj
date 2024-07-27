@@ -83,6 +83,12 @@
     <Compile Include="Controls\ctrlFindPersonCard.Designer.cs">
       <DependentUpon>ctrlFindPersonCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlIntLicenseCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlIntLicenseCard.Designer.cs">
+      <DependentUpon>ctrlIntLicenseCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlLicenseCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,24 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTest.Designer.cs">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International Driving License\frmInternationalLicenseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International Driving License\frmInternationalLicenseManagement.Designer.cs">
+      <DependentUpon>frmInternationalLicenseManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="International Driving License\frmIntLicenseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="International Driving License\frmIntLicenseDetails.Designer.cs">
+      <DependentUpon>frmIntLicenseDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="International Driving License\frmIssueInternationalDrivingLicense.cs">
       <SubType>Form</SubType>
@@ -259,6 +283,9 @@
     <EmbeddedResource Include="Controls\ctrlFindPersonCard.resx">
       <DependentUpon>ctrlFindPersonCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlIntLicenseCard.resx">
+      <DependentUpon>ctrlIntLicenseCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlLicenseCard.resx">
       <DependentUpon>ctrlLicenseCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +303,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTest.resx">
+      <DependentUpon>frmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International Driving License\frmInternationalLicenseManagement.resx">
+      <DependentUpon>frmInternationalLicenseManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="International Driving License\frmIntLicenseDetails.resx">
+      <DependentUpon>frmIntLicenseDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="International Driving License\frmIssueInternationalDrivingLicense.resx">
       <DependentUpon>frmIssueInternationalDrivingLicense.cs</DependentUpon>

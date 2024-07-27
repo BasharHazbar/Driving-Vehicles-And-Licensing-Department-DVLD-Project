@@ -122,6 +122,7 @@
             this.tsmInternationalDrivingLicense2.Name = "tsmInternationalDrivingLicense2";
             this.tsmInternationalDrivingLicense2.Size = new System.Drawing.Size(320, 26);
             this.tsmInternationalDrivingLicense2.Text = "International Driving License";
+            this.tsmInternationalDrivingLicense2.Click += new System.EventHandler(this.tsmInternationalDrivingLicense2_Click);
             // 
             // renewDrivingLicenseServiceToolStripMenuItem
             // 
@@ -174,6 +175,7 @@
             this.tsmInternationalDrivingLicense.Name = "tsmInternationalDrivingLicense";
             this.tsmInternationalDrivingLicense.Size = new System.Drawing.Size(320, 26);
             this.tsmInternationalDrivingLicense.Text = "International Driving License";
+            this.tsmInternationalDrivingLicense.Click += new System.EventHandler(this.tsmInternationalDrivingLicense_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -266,6 +268,7 @@
             this.tsmLogout.Name = "tsmLogout";
             this.tsmLogout.Size = new System.Drawing.Size(250, 32);
             this.tsmLogout.Text = "Sing Out";
+            this.tsmLogout.Click += new System.EventHandler(this.tsmLogout_Click);
             // 
             // frmMain
             // 

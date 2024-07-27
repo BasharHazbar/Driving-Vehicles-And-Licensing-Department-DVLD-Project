@@ -1,4 +1,5 @@
 ﻿using DVLD.Application_Types;
+using DVLD.International_Driving_License;
 using DVLD.Local_Driving_Licenses;
 using DVLD.People;
 using DVLD.Users;
@@ -90,6 +91,27 @@ namespace DVLD
             frmChangePassword ChangePassword = new frmChangePassword(clsGlobalSettings.User.UserID);
             ChangePassword.ShowDialog();
             ChangePassword.Dispose();
+        }
+
+        private void tsmInternationalDrivingLicense2_Click(object sender, EventArgs e)
+        {
+            frmIssueInternationalDrivingLicense IssueInternationalDrivingLicense = new frmIssueInternationalDrivingLicense();
+            IssueInternationalDrivingLicense.ShowDialog();
+            IssueInternationalDrivingLicense.Dispose();
+        }
+
+        private void tsmLogout_Click(object sender, EventArgs e)
+        {
+            frmLogin Login = new frmLogin();  
+            Login.ShowDialog();
+            Login.Dispose();
+        }
+
+        private void tsmInternationalDrivingLicense_Click(object sender, EventArgs e)
+        {
+            frmInternationalLicenseManagement LicenseManagement = new frmInternationalLicenseManagement();  
+            LicenseManagement.ShowDialog();
+            LicenseManagement.Dispose();
         }
     }
 }

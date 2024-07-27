@@ -12,12 +12,15 @@ D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlApplicationCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlDriverLicenses.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlFindLicenseCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlFindPersonCard.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlIntLicenseCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlLicenseCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlLoginUserInformation.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlPersonCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlUserCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmDriversManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmMain.resources
+D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmIntLicenseDetails.resources
+D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmIssueInternationalDrivingLicense.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Licenses_History.frmLicensesHistory.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmIssueDrivingLicense.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmLicenseDetails.resources
@@ -34,6 +37,7 @@ D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmTakeLocalDrivingLicens
 D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmTestApointmentsManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Properties.Resources.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Users.frmAddEditUser.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Users.frmChangePassword.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Users.frmLogin.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Users.frmUserDetails.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Users.frmUsersManagement.resources
@@ -42,5 +46,5 @@ D:\Projects\DVLD\obj\Debug\DVLD.csproj.CoreCompileInputs.cache
 D:\Projects\DVLD\obj\Debug\DVLD.csproj.CopyComplete
 D:\Projects\DVLD\obj\Debug\DVLD.exe
 D:\Projects\DVLD\obj\Debug\DVLD.pdb
-D:\Projects\DVLD\obj\Debug\DVLD.Users.frmChangePassword.resources
-D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmIssueInternationalDrivingLicense.resources
+D:\Projects\DVLD\obj\Debug\DVLD.frmTest.resources
+D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmInternationalLicenseManagement.resources
