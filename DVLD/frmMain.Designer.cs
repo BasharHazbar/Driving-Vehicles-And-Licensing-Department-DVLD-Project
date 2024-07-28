@@ -34,8 +34,8 @@
             this.newLocalDrivingLicenseServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLocalDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmInternationalDrivingLicense2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.renewDrivingLicenseServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.replacementForALostDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmRenewDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReplacementForADamageOrLostDrivingLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.releaseDetainedDrivingLicsenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retakeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +67,7 @@
             this.accountSettingsToolStripMenuItem});
             this.msMainMenuDvld.Location = new System.Drawing.Point(0, 0);
             this.msMainMenuDvld.Name = "msMainMenuDvld";
-            this.msMainMenuDvld.Size = new System.Drawing.Size(1033, 80);
+            this.msMainMenuDvld.Size = new System.Drawing.Size(1223, 80);
             this.msMainMenuDvld.TabIndex = 2;
             this.msMainMenuDvld.Text = "menuStrip1";
             // 
@@ -91,8 +91,8 @@
             // 
             this.drivingLiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newLocalDrivingLicenseServiceToolStripMenuItem,
-            this.renewDrivingLicenseServiceToolStripMenuItem,
-            this.replacementForALostDrivingLicenseToolStripMenuItem,
+            this.tsmRenewDrivingLicense,
+            this.tsmReplacementForADamageOrLostDrivingLicense,
             this.toolStripMenuItem1,
             this.releaseDetainedDrivingLicsenseToolStripMenuItem,
             this.retakeTestToolStripMenuItem});
@@ -107,7 +107,7 @@
             this.tsmLocalDrivingLicense,
             this.tsmInternationalDrivingLicense2});
             this.newLocalDrivingLicenseServiceToolStripMenuItem.Name = "newLocalDrivingLicenseServiceToolStripMenuItem";
-            this.newLocalDrivingLicenseServiceToolStripMenuItem.Size = new System.Drawing.Size(407, 26);
+            this.newLocalDrivingLicenseServiceToolStripMenuItem.Size = new System.Drawing.Size(500, 26);
             this.newLocalDrivingLicenseServiceToolStripMenuItem.Text = "New Driving License Service";
             // 
             // tsmLocalDrivingLicense
@@ -124,33 +124,35 @@
             this.tsmInternationalDrivingLicense2.Text = "International Driving License";
             this.tsmInternationalDrivingLicense2.Click += new System.EventHandler(this.tsmInternationalDrivingLicense2_Click);
             // 
-            // renewDrivingLicenseServiceToolStripMenuItem
+            // tsmRenewDrivingLicense
             // 
-            this.renewDrivingLicenseServiceToolStripMenuItem.Name = "renewDrivingLicenseServiceToolStripMenuItem";
-            this.renewDrivingLicenseServiceToolStripMenuItem.Size = new System.Drawing.Size(407, 26);
-            this.renewDrivingLicenseServiceToolStripMenuItem.Text = "Renew Driving License Service";
+            this.tsmRenewDrivingLicense.Name = "tsmRenewDrivingLicense";
+            this.tsmRenewDrivingLicense.Size = new System.Drawing.Size(500, 26);
+            this.tsmRenewDrivingLicense.Text = "Renew Driving License Service";
+            this.tsmRenewDrivingLicense.Click += new System.EventHandler(this.tsmRenewDrivingLicense_Click);
             // 
-            // replacementForALostDrivingLicenseToolStripMenuItem
+            // tsmReplacementForADamageOrLostDrivingLicense
             // 
-            this.replacementForALostDrivingLicenseToolStripMenuItem.Name = "replacementForALostDrivingLicenseToolStripMenuItem";
-            this.replacementForALostDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(407, 26);
-            this.replacementForALostDrivingLicenseToolStripMenuItem.Text = "Replacement for a Lost Driving License";
+            this.tsmReplacementForADamageOrLostDrivingLicense.Name = "tsmReplacementForADamageOrLostDrivingLicense";
+            this.tsmReplacementForADamageOrLostDrivingLicense.Size = new System.Drawing.Size(500, 26);
+            this.tsmReplacementForADamageOrLostDrivingLicense.Text = "Replacement for a Damage or Lost Driving License";
+            this.tsmReplacementForADamageOrLostDrivingLicense.Click += new System.EventHandler(this.tsmReplacementForADamageOrLostDrivingLicense_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(404, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(497, 6);
             // 
             // releaseDetainedDrivingLicsenseToolStripMenuItem
             // 
             this.releaseDetainedDrivingLicsenseToolStripMenuItem.Name = "releaseDetainedDrivingLicsenseToolStripMenuItem";
-            this.releaseDetainedDrivingLicsenseToolStripMenuItem.Size = new System.Drawing.Size(407, 26);
+            this.releaseDetainedDrivingLicsenseToolStripMenuItem.Size = new System.Drawing.Size(500, 26);
             this.releaseDetainedDrivingLicsenseToolStripMenuItem.Text = "Release Detained Driving Licsense";
             // 
             // retakeTestToolStripMenuItem
             // 
             this.retakeTestToolStripMenuItem.Name = "retakeTestToolStripMenuItem";
-            this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(407, 26);
+            this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(500, 26);
             this.retakeTestToolStripMenuItem.Text = "Retake Test";
             // 
             // applicationManagementToolStripMenuItem
@@ -274,7 +276,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 475);
+            this.ClientSize = new System.Drawing.Size(1223, 643);
             this.Controls.Add(this.msMainMenuDvld);
             this.IsMdiContainer = true;
             this.Name = "frmMain";
@@ -306,8 +308,8 @@
         private System.Windows.Forms.ToolStripMenuItem retakeTestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem releaseDetainedDrivingLicsenseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem replacementForALostDrivingLicenseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem renewDrivingLicenseServiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmReplacementForADamageOrLostDrivingLicense;
+        private System.Windows.Forms.ToolStripMenuItem tsmRenewDrivingLicense;
         private System.Windows.Forms.ToolStripMenuItem tsmInternationalDrivingLicense2;
         private System.Windows.Forms.ToolStripMenuItem tsmLocalDrivingLicense;
         private System.Windows.Forms.ToolStripMenuItem newLocalDrivingLicenseServiceToolStripMenuItem;

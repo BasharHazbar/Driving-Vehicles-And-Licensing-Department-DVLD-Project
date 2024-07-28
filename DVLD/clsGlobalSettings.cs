@@ -23,7 +23,7 @@ namespace DVLD
 
         public enum enApplicationStatus { New = 1, Canceled = 2, Complated = 3 };
 
-        public enum enIssuedReason { FirstTime = 1, Renew = 2, ReplacementForDamagedComplated = 3, ReplacementForLost = 4 };
+        public enum enIssuedReason { FirstTime = 1, Renew = 2, ReplacementForDamaged = 3, ReplacementForLost = 4 };
 
         public static int TryParse(string Value)
         {

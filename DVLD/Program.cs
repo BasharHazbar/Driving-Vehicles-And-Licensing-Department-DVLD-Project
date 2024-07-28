@@ -3,6 +3,8 @@ using DVLD.International_Driving_License;
 using DVLD.Licenses_History;
 using DVLD.Local_Driving_Licenses;
 using DVLD.People;
+using DVLD.Renew_Local_Driving_License;
+using DVLD.Replacement_Local_Driving_License;
 using DVLD.Users;
 using System;
 using System.Collections.Generic;
@@ -25,8 +27,10 @@ namespace DVLD
             //Application.Run(new frmLicensesHistory(1));
             //Application.Run(new frmPeopleManagement()); 
             //Application.Run(new frmInternationalLicenseManagement());
+            //Application.Run(new frmReplacementForDamageOrLostLocalLicense());
+
+            //Application.Run(new frmRenewLocalDrivingLicense());
             Application.Run(new frmLogin());
-            //Application.Run(new frmTest());
             // Application.Run(new frmUsersManagement());
 
             // Application.Run(new frmIssueInternationalDrivingLicense());

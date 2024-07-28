@@ -65,19 +65,22 @@ namespace DVLD.Local_Driving_Licenses
             _License.IssueReason = (byte)clsGlobalSettings.enIssuedReason.FirstTime;
             _License.CreatedByUserID = clsGlobalSettings.User.UserID;
 
-
-            if (_License.Save())
+            if (MessageBox.Show("Are you sure you want to Issue the License ", "Confirm",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("License Issued Successfuly With ID = " + _License.LicenseID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (_License.Save())
+                {
+                    MessageBox.Show("License Issued Successfuly With ID = " + _License.LicenseID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                clsApplications.ChangeStatusApplication(_ApplicationID, (byte)clsGlobalSettings.enApplicationStatus.Complated);
+                    clsApplications.ChangeStatusApplication(_ApplicationID, (byte)clsGlobalSettings.enApplicationStatus.Complated);
 
-                btnIssueLicense.Enabled = false;
+                    btnIssueLicense.Enabled = false;
+                }
+
+                else
+                    MessageBox.Show("Data Not Save Successfuly", "Not Saved",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            else
-                MessageBox.Show("Data Not Save Successfuly", "Not Saved",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
             return;
 
         }

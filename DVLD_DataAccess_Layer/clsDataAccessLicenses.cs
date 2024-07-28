@@ -176,6 +176,8 @@ namespace DVLD_DataAccess_Layer
 
             cmd.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
 
+            cmd.Parameters.AddWithValue("@Notes", CheckIsNullOrEmpty(Notes));
+
             cmd.Parameters.AddWithValue("@PaidFees", PaidFees);
             cmd.Parameters.AddWithValue("@IsActive", IsActive);
             cmd.Parameters.AddWithValue("@IssueReason", IssueReason);
@@ -196,7 +198,7 @@ namespace DVLD_DataAccess_Layer
 
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex);
             }
 
             finally

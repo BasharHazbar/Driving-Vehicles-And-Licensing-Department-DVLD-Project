@@ -40,6 +40,7 @@ namespace DVLD.International_Driving_License
             lbILApplicationIDValue.Text = "[????]";
             lbIntLicenseIDValue.Text = "[????]";
             lbLocalLicenseIDValue.Text = "[????]";
+            lbFeesValue.Text = "[????]";
             btnIssueLicense.Enabled = false;
             lbShowLicenseHistory.Enabled = false;
             lbShowLicense.Enabled = false;
@@ -55,7 +56,6 @@ namespace DVLD.International_Driving_License
                 if (_License == null)
                 {
                     MessageBox.Show("NO License With ID = " + LicenseID, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   // _LicenseID = -1;
                     ctrlLicenseCard.ResetLicenseData();
                     ResetData();
                     return;
@@ -68,7 +68,6 @@ namespace DVLD.International_Driving_License
                 if (!_License.IsActive)
                 {
                     MessageBox.Show("This License With ID = " + _License.LicenseID + " Not Active", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //_LicenseID = -1;
                     ctrlLicenseCard.ResetLicenseData();
                     ResetData();
                     return;
@@ -131,6 +130,9 @@ namespace DVLD.International_Driving_License
         void IssueInternationalLicense()
         {
 
+            _Application = new clsApplications();
+            _InternationalLicense = new clsInternationalLicenses();
+
             _Application.ApplicantPersonID = _Driver.PersonID;
             _Application.ApplicationDate = DateTime.Now;
             _Application.ApplicationTypeID = _ApplicationType.ApplicationTypeID;
@@ -139,44 +141,47 @@ namespace DVLD.International_Driving_License
             _Application.LastStatusDate = DateTime.Now;
             _Application.CreatedByUserID = clsGlobalSettings.User.UserID;
 
-            if (_Application.Save())
+            if (MessageBox.Show("Are you sure you want to Issue the License ", "Confirm",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                _InternationalLicense.ApplicationID = _Application.ApplicationID;
-                _InternationalLicense.DriverID = _License.DriverID;
-                _InternationalLicense.IssuedUsingLocalLicenseID = _License.LicenseID;
-                _InternationalLicense.IssueDate = DateTime.Now;
-                _InternationalLicense.ExpirationDate = DateTime.Now.AddYears(1);
-                _InternationalLicense.CreatedByUserID = clsGlobalSettings.User.UserID;
-
-                if (_InternationalLicense.Save())
+                if (_Application.Save())
                 {
-                    clsApplications.ChangeStatusApplication(_Application.ApplicationID,
-                        (byte)clsGlobalSettings.enApplicationStatus.Complated);
+                    _InternationalLicense.ApplicationID = _Application.ApplicationID;
+                    _InternationalLicense.DriverID = _License.DriverID;
+                    _InternationalLicense.IssuedUsingLocalLicenseID = _License.LicenseID;
+                    _InternationalLicense.IssueDate = DateTime.Now;
+                    _InternationalLicense.ExpirationDate = DateTime.Now.AddYears(1);
+                    _InternationalLicense.CreatedByUserID = clsGlobalSettings.User.UserID;
 
-                    MessageBox.Show("Data Save Successfuly", "Saved",
-                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (_InternationalLicense.Save())
+                    {
+                        clsApplications.ChangeStatusApplication(_Application.ApplicationID,
+                            (byte)clsGlobalSettings.enApplicationStatus.Complated);
 
-                    lbShowLicense.Enabled = true;
-                    btnIssueLicense.Enabled = false;
+                        MessageBox.Show("International License Issued Successfuly With ID = " +
+                            _InternationalLicense.InternationalLicenseID, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    lbILApplicationIDValue.Text = _Application.ApplicationID.ToString();    
-                    lbIntLicenseIDValue.Text = _InternationalLicense.InternationalLicenseID.ToString();
+                        lbILApplicationIDValue.Text = _Application.ApplicationID.ToString();
+                        lbIntLicenseIDValue.Text = _InternationalLicense.InternationalLicenseID.ToString();
 
+                        lbShowLicense.Enabled = true;
+                        btnIssueLicense.Enabled = false;
+                        gbFilter.Enabled = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data Not Save Successfuly", "Not Saved",
+                       MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
             }
-            else
-            {
-                MessageBox.Show("Data Not Save Successfuly", "Not Saved",
-                   MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+
+           
         }
 
         private void frmIssueInternationalDrivingLicense_Load(object sender, EventArgs e)
         {
-
-            _Application = new clsApplications();
-            _InternationalLicense = new clsInternationalLicenses();
             btnIssueLicense.Enabled = false;
             lbShowLicenseHistory.Enabled = false;
             lbShowLicense.Enabled = false;

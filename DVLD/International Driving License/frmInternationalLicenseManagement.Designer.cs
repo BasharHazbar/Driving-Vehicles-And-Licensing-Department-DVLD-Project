@@ -33,33 +33,21 @@
             this.lbRecordsCountValue = new System.Windows.Forms.Label();
             this.lbRecordsCount = new System.Windows.Forms.Label();
             this.dgvIntLicensesList = new System.Windows.Forms.DataGridView();
+            this.cmsIntLicensesManagement = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmShowPersonDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmShowLicenseDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmShowPersonLicenseHistory = new System.Windows.Forms.ToolStripMenuItem();
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.tbFilterBy = new System.Windows.Forms.TextBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.lbFilter = new System.Windows.Forms.Label();
             this.cbFindByIsActive = new System.Windows.Forms.ComboBox();
-            this.cmsIntLicensesManagement = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tsmShowPersonDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmShowLicenseDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmShowPersonLicenseHistory = new System.Windows.Forms.ToolStripMenuItem();
             pbAddNewIntLicense = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntLicensesList)).BeginInit();
             this.cmsIntLicensesManagement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbAddNewIntLicense
-            // 
-            pbAddNewIntLicense.Cursor = System.Windows.Forms.Cursors.Hand;
-            pbAddNewIntLicense.Image = global::DVLD.Properties.Resources.Add_Application;
-            pbAddNewIntLicense.Location = new System.Drawing.Point(1130, 69);
-            pbAddNewIntLicense.Name = "pbAddNewIntLicense";
-            pbAddNewIntLicense.Size = new System.Drawing.Size(88, 64);
-            pbAddNewIntLicense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pbAddNewIntLicense.TabIndex = 47;
-            pbAddNewIntLicense.TabStop = false;
-            pbAddNewIntLicense.Click += new System.EventHandler(this.pbAddNewIntLicense_Click);
             // 
             // lbRecordsCountValue
             // 
@@ -97,6 +85,37 @@
             this.dgvIntLicensesList.RowTemplate.Height = 24;
             this.dgvIntLicensesList.Size = new System.Drawing.Size(1151, 366);
             this.dgvIntLicensesList.TabIndex = 38;
+            // 
+            // cmsIntLicensesManagement
+            // 
+            this.cmsIntLicensesManagement.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsIntLicensesManagement.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmShowPersonDetails,
+            this.tsmShowLicenseDetails,
+            this.tsmShowPersonLicenseHistory});
+            this.cmsIntLicensesManagement.Name = "cmsIntLicensesManagement";
+            this.cmsIntLicensesManagement.Size = new System.Drawing.Size(265, 76);
+            // 
+            // tsmShowPersonDetails
+            // 
+            this.tsmShowPersonDetails.Name = "tsmShowPersonDetails";
+            this.tsmShowPersonDetails.Size = new System.Drawing.Size(264, 24);
+            this.tsmShowPersonDetails.Text = "Show Person Details";
+            this.tsmShowPersonDetails.Click += new System.EventHandler(this.tsmShowPersonDetails_Click);
+            // 
+            // tsmShowLicenseDetails
+            // 
+            this.tsmShowLicenseDetails.Name = "tsmShowLicenseDetails";
+            this.tsmShowLicenseDetails.Size = new System.Drawing.Size(264, 24);
+            this.tsmShowLicenseDetails.Text = "Show License Details";
+            this.tsmShowLicenseDetails.Click += new System.EventHandler(this.tsmShowLicenseDetails_Click);
+            // 
+            // tsmShowPersonLicenseHistory
+            // 
+            this.tsmShowPersonLicenseHistory.Name = "tsmShowPersonLicenseHistory";
+            this.tsmShowPersonLicenseHistory.Size = new System.Drawing.Size(264, 24);
+            this.tsmShowPersonLicenseHistory.Text = "Show Person License History";
+            this.tsmShowPersonLicenseHistory.Click += new System.EventHandler(this.tsmShowPersonLicenseHistory_Click);
             // 
             // lbTitle
             // 
@@ -175,36 +194,17 @@
             this.cbFindByIsActive.TabIndex = 46;
             this.cbFindByIsActive.SelectedIndexChanged += new System.EventHandler(this.cbFindByIsActive_SelectedIndexChanged);
             // 
-            // cmsIntLicensesManagement
+            // pbAddNewIntLicense
             // 
-            this.cmsIntLicensesManagement.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsIntLicensesManagement.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmShowPersonDetails,
-            this.tsmShowLicenseDetails,
-            this.tsmShowPersonLicenseHistory});
-            this.cmsIntLicensesManagement.Name = "cmsIntLicensesManagement";
-            this.cmsIntLicensesManagement.Size = new System.Drawing.Size(265, 76);
-            // 
-            // tsmShowPersonDetails
-            // 
-            this.tsmShowPersonDetails.Name = "tsmShowPersonDetails";
-            this.tsmShowPersonDetails.Size = new System.Drawing.Size(264, 24);
-            this.tsmShowPersonDetails.Text = "Show Person Details";
-            this.tsmShowPersonDetails.Click += new System.EventHandler(this.tsmShowPersonDetails_Click);
-            // 
-            // tsmShowLicenseDetails
-            // 
-            this.tsmShowLicenseDetails.Name = "tsmShowLicenseDetails";
-            this.tsmShowLicenseDetails.Size = new System.Drawing.Size(264, 24);
-            this.tsmShowLicenseDetails.Text = "Show License Details";
-            this.tsmShowLicenseDetails.Click += new System.EventHandler(this.tsmShowLicenseDetails_Click);
-            // 
-            // tsmShowPersonLicenseHistory
-            // 
-            this.tsmShowPersonLicenseHistory.Name = "tsmShowPersonLicenseHistory";
-            this.tsmShowPersonLicenseHistory.Size = new System.Drawing.Size(264, 24);
-            this.tsmShowPersonLicenseHistory.Text = "Show Person License History";
-            this.tsmShowPersonLicenseHistory.Click += new System.EventHandler(this.tsmShowPersonLicenseHistory_Click);
+            pbAddNewIntLicense.Cursor = System.Windows.Forms.Cursors.Hand;
+            pbAddNewIntLicense.Image = global::DVLD.Properties.Resources.Add_Application;
+            pbAddNewIntLicense.Location = new System.Drawing.Point(1130, 69);
+            pbAddNewIntLicense.Name = "pbAddNewIntLicense";
+            pbAddNewIntLicense.Size = new System.Drawing.Size(88, 64);
+            pbAddNewIntLicense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pbAddNewIntLicense.TabIndex = 47;
+            pbAddNewIntLicense.TabStop = false;
+            pbAddNewIntLicense.Click += new System.EventHandler(this.pbAddNewIntLicense_Click);
             // 
             // frmInternationalLicenseManagement
             // 
@@ -225,9 +225,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "International License Management";
             this.Load += new System.EventHandler(this.frmInternationalLicenseManagement_Load);
-            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntLicensesList)).EndInit();
             this.cmsIntLicensesManagement.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

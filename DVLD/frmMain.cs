@@ -2,6 +2,8 @@
 using DVLD.International_Driving_License;
 using DVLD.Local_Driving_Licenses;
 using DVLD.People;
+using DVLD.Renew_Local_Driving_License;
+using DVLD.Replacement_Local_Driving_License;
 using DVLD.Users;
 using System;
 using System.Collections.Generic;
@@ -112,6 +114,21 @@ namespace DVLD
             frmInternationalLicenseManagement LicenseManagement = new frmInternationalLicenseManagement();  
             LicenseManagement.ShowDialog();
             LicenseManagement.Dispose();
+        }
+
+        private void tsmRenewDrivingLicense_Click(object sender, EventArgs e)
+        {
+            frmRenewLocalDrivingLicense RenewLocalDrivingLicense = new frmRenewLocalDrivingLicense();
+            RenewLocalDrivingLicense.ShowDialog();
+            RenewLocalDrivingLicense.Dispose();
+        }
+
+        private void tsmReplacementForADamageOrLostDrivingLicense_Click(object sender, EventArgs e)
+        {
+            frmReplacementForDamageOrLostLocalLicense ReplacementForDamageOrLostLocalLicense = 
+                new frmReplacementForDamageOrLostLocalLicense();
+            ReplacementForDamageOrLostLocalLicense.ShowDialog();
+            ReplacementForDamageOrLostLocalLicense.Dispose();
         }
     }
 }

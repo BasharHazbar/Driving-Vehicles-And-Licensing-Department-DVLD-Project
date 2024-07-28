@@ -107,7 +107,7 @@
             this.tsmPhoneCall});
             this.cmsUserManageMenu.Name = "cmsPeopleManageMenu";
             this.cmsUserManageMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.cmsUserManageMenu.Size = new System.Drawing.Size(194, 184);
+            this.cmsUserManageMenu.Size = new System.Drawing.Size(211, 212);
             // 
             // tsmShowDetails
             // 
@@ -119,7 +119,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(190, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(207, 6);
             // 
             // tsmAddNewUser
             // 
@@ -152,18 +152,18 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(190, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(207, 6);
             // 
             // tsmSendEmail
             // 
             this.tsmSendEmail.Name = "tsmSendEmail";
-            this.tsmSendEmail.Size = new System.Drawing.Size(193, 24);
+            this.tsmSendEmail.Size = new System.Drawing.Size(210, 24);
             this.tsmSendEmail.Text = "Send Email";
             // 
             // tsmPhoneCall
             // 
             this.tsmPhoneCall.Name = "tsmPhoneCall";
-            this.tsmPhoneCall.Size = new System.Drawing.Size(193, 24);
+            this.tsmPhoneCall.Size = new System.Drawing.Size(210, 24);
             this.tsmPhoneCall.Text = "Phone Call";
             // 
             // cbFindByIsActive

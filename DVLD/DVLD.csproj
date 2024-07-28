@@ -185,6 +185,18 @@
     <Compile Include="People\frmPersonDetails.Designer.cs">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Renew Local Driving License\frmRenewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Renew Local Driving License\frmRenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Replacement Local Driving License\frmReplacementForDamageOrLostLocalLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Replacement Local Driving License\frmReplacementForDamageOrLostLocalLicense.Designer.cs">
+      <DependentUpon>frmReplacementForDamageOrLostLocalLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test Types\frmEditTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +345,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmPersonDetails.resx">
       <DependentUpon>frmPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Renew Local Driving License\frmRenewLocalDrivingLicense.resx">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Replacement Local Driving License\frmReplacementForDamageOrLostLocalLicense.resx">
+      <DependentUpon>frmReplacementForDamageOrLostLocalLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test Types\frmEditTestTypes.resx">
       <DependentUpon>frmEditTestTypes.cs</DependentUpon>

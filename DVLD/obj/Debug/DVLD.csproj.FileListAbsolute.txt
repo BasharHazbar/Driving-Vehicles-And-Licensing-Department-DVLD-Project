@@ -19,6 +19,8 @@ D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlPersonCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlUserCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmDriversManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmMain.resources
+D:\Projects\DVLD\obj\Debug\DVLD.frmTest.resources
+D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmInternationalLicenseManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmIntLicenseDetails.resources
 D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmIssueInternationalDrivingLicense.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Licenses_History.frmLicensesHistory.resources
@@ -27,6 +29,8 @@ D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmLicenseDetails.resourc
 D:\Projects\DVLD\obj\Debug\DVLD.People.frmAddEditPerson.resources
 D:\Projects\DVLD\obj\Debug\DVLD.People.frmPeopleManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.People.frmPersonDetails.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Renew_Local_Driving_License.frmRenewLocalDrivingLicense.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Replacement_Local_Driving_License.frmReplacementForDamageOrLostLocalLicense.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Test_Types.frmEditTestTypes.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmTestTypesManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Local_Driving_Licenses.frmAddEditLocalLicenseTestAppointments.resources
@@ -46,5 +50,3 @@ D:\Projects\DVLD\obj\Debug\DVLD.csproj.CoreCompileInputs.cache
 D:\Projects\DVLD\obj\Debug\DVLD.csproj.CopyComplete
 D:\Projects\DVLD\obj\Debug\DVLD.exe
 D:\Projects\DVLD\obj\Debug\DVLD.pdb
-D:\Projects\DVLD\obj\Debug\DVLD.frmTest.resources
-D:\Projects\DVLD\obj\Debug\DVLD.International_Driving_License.frmInternationalLicenseManagement.resources
