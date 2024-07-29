@@ -22,6 +22,12 @@ namespace DVLD
         public frmMain()
         {
             InitializeComponent();
+
+            this.BackgroundImage = Properties.Resources.Main_Background_3; // Replace with your image name
+            this.BackgroundImageLayout = ImageLayout.Stretch; // Adjust the layout as needed
+
+            // Add Paint event handler for semi-transparent overlay
+            this.Paint += new PaintEventHandler(frmMain_Paint);
         }
 
         private void tsmLocalDrivingLicense2_Click(object sender, EventArgs e)
@@ -36,6 +42,7 @@ namespace DVLD
         private void frmMain_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+
         }
 
         private void tsmLocalDrivingLicense_Click(object sender, EventArgs e)
@@ -104,8 +111,9 @@ namespace DVLD
 
         private void tsmLogout_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmLogin Login = new frmLogin();  
-            Login.ShowDialog();
+            Login.Show();
             Login.Dispose();
         }
 
@@ -129,6 +137,14 @@ namespace DVLD
                 new frmReplacementForDamageOrLostLocalLicense();
             ReplacementForDamageOrLostLocalLicense.ShowDialog();
             ReplacementForDamageOrLostLocalLicense.Dispose();
+        }
+
+        private void frmMain_Paint(object sender, PaintEventArgs e)
+        {
+            using (Brush brush = new SolidBrush(Color.FromArgb(150, Color.White))) 
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
         }
     }
 }

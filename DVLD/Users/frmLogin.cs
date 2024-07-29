@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,19 +19,21 @@ namespace DVLD.Users
             InitializeComponent();
         }
 
+        private bool IsEmptyFaild()
+        {
+            return clsGlobalSettings.IsEmpty(tbUsername.Text) || clsGlobalSettings.IsEmpty(tbPassword.Text);
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            clsUsers User = clsUsers.Find(tbUserName.Text, tbPassword.Text);
-
-            if (User != null && User.IsActive)
+            if (IsEmptyFaild())
             {
-                clsGlobalSettings.User = User;
-                frmMain Main = new frmMain();
-                Main.ShowDialog();
-                Main.Dispose();
-
+                MessageBox.Show("Please Fill The Faild + ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else if (User == null)
+
+            clsUsers User = clsUsers.Find(tbUsername.Text, clsGlobalSettings.EncryptText(tbPassword.Text));
+
+            if (User == null)
             {
                 MessageBox.Show("Invalid UserName Or Password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -39,21 +42,28 @@ namespace DVLD.Users
 
                 MessageBox.Show("User Not Active Contact With Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            else
+            {
+                this.Hide();
+                clsGlobalSettings.User = User;
+                frmMain Main = new frmMain();
+                Main.Show();
+                Main.Dispose();
+            }
         }
 
         private void tbUserName_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbUserName.Text))
+            if (string.IsNullOrWhiteSpace(tbUsername.Text))
             {
                 e.Cancel = true;
-                tbUserName.Focus();
-                epValidating.SetError(tbUserName, "The User Name should have Value");
+                tbUsername.Focus();
+                epValidating.SetError(tbUsername, "The User Name should have Value");
             }
             else
             {
                 e.Cancel = false;
-                epValidating.SetError(tbUserName, "");
+                epValidating.SetError(tbUsername, "");
             }
         }
 
@@ -72,5 +82,6 @@ namespace DVLD.Users
             }
         }
 
+        
     }
 }

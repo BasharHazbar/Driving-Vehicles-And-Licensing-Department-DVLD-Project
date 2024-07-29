@@ -181,7 +181,7 @@ namespace DVLD.Users
 
             _User.PersonID = ctrlFindPersonCard.PersonID;
             _User.UserName = tbUserName.Text;
-            _User.Password = tbPassword.Text;
+            _User.Password = clsGlobalSettings.EncryptText(tbPassword.Text);
             _User.IsActive = cbIsActive.Checked;
 
             if (_User.Save())

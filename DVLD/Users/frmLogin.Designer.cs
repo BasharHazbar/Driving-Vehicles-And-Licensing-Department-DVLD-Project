@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.cbRememberMe = new System.Windows.Forms.CheckBox();
+            this.chkRememberMe = new System.Windows.Forms.CheckBox();
             this.lbPassword = new System.Windows.Forms.Label();
             this.lbUserName = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.tbUserName = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.epValidating = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.epValidating)).BeginInit();
@@ -52,17 +52,17 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // cbRememberMe
+            // chkRememberMe
             // 
-            this.cbRememberMe.AutoSize = true;
-            this.cbRememberMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRememberMe.Location = new System.Drawing.Point(541, 244);
-            this.cbRememberMe.Name = "cbRememberMe";
-            this.cbRememberMe.Size = new System.Drawing.Size(141, 24);
-            this.cbRememberMe.TabIndex = 12;
-            this.cbRememberMe.Text = "Remember Me";
-            this.cbRememberMe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.cbRememberMe.UseVisualStyleBackColor = true;
+            this.chkRememberMe.AutoSize = true;
+            this.chkRememberMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkRememberMe.Location = new System.Drawing.Point(541, 244);
+            this.chkRememberMe.Name = "chkRememberMe";
+            this.chkRememberMe.Size = new System.Drawing.Size(141, 24);
+            this.chkRememberMe.TabIndex = 12;
+            this.chkRememberMe.Text = "Remember Me";
+            this.chkRememberMe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.chkRememberMe.UseVisualStyleBackColor = true;
             // 
             // lbPassword
             // 
@@ -94,14 +94,14 @@
             this.tbPassword.TabIndex = 9;
             this.tbPassword.Validating += new System.ComponentModel.CancelEventHandler(this.tbPassword_Validating);
             // 
-            // tbUserName
+            // tbUsername
             // 
-            this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserName.Location = new System.Drawing.Point(541, 147);
-            this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(208, 27);
-            this.tbUserName.TabIndex = 8;
-            this.tbUserName.Validating += new System.ComponentModel.CancelEventHandler(this.tbUserName_Validating);
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsername.Location = new System.Drawing.Point(541, 147);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(208, 27);
+            this.tbUsername.TabIndex = 8;
+            this.tbUsername.Validating += new System.ComponentModel.CancelEventHandler(this.tbUserName_Validating);
             // 
             // epValidating
             // 
@@ -123,11 +123,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(798, 485);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.cbRememberMe);
+            this.Controls.Add(this.chkRememberMe);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbUserName);
             this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbUserName);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -142,11 +142,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.CheckBox cbRememberMe;
+        private System.Windows.Forms.CheckBox chkRememberMe;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Label lbUserName;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.TextBox tbUserName;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ErrorProvider epValidating;
     }

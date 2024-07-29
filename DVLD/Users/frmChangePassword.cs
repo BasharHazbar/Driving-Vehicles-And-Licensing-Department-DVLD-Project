@@ -104,7 +104,7 @@ namespace DVLD.Users
                 return;
             }
 
-            _User.Password = tbNewPassword.Text;
+            _User.Password = clsGlobalSettings.EncryptText(tbNewPassword.Text); ;
             if (_User.Save())
             {
                 MessageBox.Show("The Password Changed Successfly!", "Saved", MessageBoxButtons.OK,

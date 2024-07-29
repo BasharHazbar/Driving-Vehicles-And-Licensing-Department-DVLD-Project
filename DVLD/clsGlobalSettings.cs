@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,8 +10,9 @@ namespace DVLD
 {
     public class clsGlobalSettings
     {
-
         public static clsUsers User { get; set; }
+
+        private static int KeyOfDecEnc = 3;
 
         public enum enApplicationTypes
         {
@@ -38,6 +40,35 @@ namespace DVLD
         public static bool IsEmpty(string Value)
         {
             return string.IsNullOrWhiteSpace(Value) || string.IsNullOrEmpty(Value);
+        }
+
+        public static string HashPassword(string Password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(Password));
+                return Convert.ToBase64String(bytes);
+            }
+        }
+
+        public static string EncryptText(string Text)
+        {
+            char[] buffer = Text.ToCharArray();
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                buffer[i] = (char)(buffer[i] + KeyOfDecEnc);
+            }
+            return new string(buffer);
+        }
+
+        public static string DecryptText(string Text)
+        {
+            char[] buffer = Text.ToCharArray();
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                buffer[i] = (char)(buffer[i] - KeyOfDecEnc);
+            }
+            return new string(buffer);
         }
     }
 }
