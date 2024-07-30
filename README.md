@@ -1,5 +1,5 @@
 # Driving Vehicles  And Licesing Department - DVLD
-# Technologies:- Windows Form Application , C# , SqlServer Database
+# Technologies:- Visual Studio Code, Windows Form Application , C# , SqlServer Database
 This Projects Contains A lot of Features That is:-
 1. People Management ==> List Person with filter And CURD Oprations 
 2. Users Management ==> List Users with filter And CURD Oprations
