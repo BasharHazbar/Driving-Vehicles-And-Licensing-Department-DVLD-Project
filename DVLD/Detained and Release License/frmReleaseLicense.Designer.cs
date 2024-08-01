@@ -37,8 +37,8 @@
             this.lb1LicenseID = new System.Windows.Forms.Label();
             this.lb1LicenseIDValue = new System.Windows.Forms.Label();
             this.lbApplicationFees = new System.Windows.Forms.Label();
-            this.lbDetainedDate = new System.Windows.Forms.Label();
-            this.lbDetainedDateValue = new System.Windows.Forms.Label();
+            this.lbReleasedDate = new System.Windows.Forms.Label();
+            this.lbReleasedDateValue = new System.Windows.Forms.Label();
             this.lbShowLicenseHistory = new System.Windows.Forms.LinkLabel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbDetainedID = new System.Windows.Forms.Label();
@@ -46,15 +46,15 @@
             this.lbDetainedIDValue = new System.Windows.Forms.Label();
             this.lbShowReleaseLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.gbDetainedInfo = new System.Windows.Forms.GroupBox();
-            this.btnRelease = new System.Windows.Forms.Button();
-            this.ctrlLicenseCard = new DVLD.Controls.ctrlLicenseCard();
-            this.lbApplicationFeesValue = new System.Windows.Forms.Label();
-            this.lbFanFeesValue = new System.Windows.Forms.Label();
-            this.lbFanFees = new System.Windows.Forms.Label();
-            this.lbTotalFeesValue = new System.Windows.Forms.Label();
-            this.lbTotalFees = new System.Windows.Forms.Label();
             this.lbApplicationID = new System.Windows.Forms.Label();
             this.lbApplicationIDValue = new System.Windows.Forms.Label();
+            this.lbTotalFeesValue = new System.Windows.Forms.Label();
+            this.lbTotalFees = new System.Windows.Forms.Label();
+            this.lbFanFeesValue = new System.Windows.Forms.Label();
+            this.lbFanFees = new System.Windows.Forms.Label();
+            this.lbApplicationFeesValue = new System.Windows.Forms.Label();
+            this.btnRelease = new System.Windows.Forms.Button();
+            this.ctrlLicenseCard = new DVLD.Controls.ctrlLicenseCard();
             this.gbFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbFindLicense)).BeginInit();
             this.gbDetainedInfo.SuspendLayout();
@@ -154,25 +154,25 @@
             this.lbApplicationFees.TabIndex = 28;
             this.lbApplicationFees.Text = "Application Fees:";
             // 
-            // lbDetainedDate
+            // lbReleasedDate
             // 
-            this.lbDetainedDate.AutoSize = true;
-            this.lbDetainedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDetainedDate.Location = new System.Drawing.Point(6, 80);
-            this.lbDetainedDate.Name = "lbDetainedDate";
-            this.lbDetainedDate.Size = new System.Drawing.Size(136, 20);
-            this.lbDetainedDate.TabIndex = 24;
-            this.lbDetainedDate.Text = "Detained Date:";
+            this.lbReleasedDate.AutoSize = true;
+            this.lbReleasedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReleasedDate.Location = new System.Drawing.Point(6, 80);
+            this.lbReleasedDate.Name = "lbReleasedDate";
+            this.lbReleasedDate.Size = new System.Drawing.Size(139, 20);
+            this.lbReleasedDate.TabIndex = 24;
+            this.lbReleasedDate.Text = "Released Date:";
             // 
-            // lbDetainedDateValue
+            // lbReleasedDateValue
             // 
-            this.lbDetainedDateValue.AutoSize = true;
-            this.lbDetainedDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDetainedDateValue.Location = new System.Drawing.Point(206, 80);
-            this.lbDetainedDateValue.Name = "lbDetainedDateValue";
-            this.lbDetainedDateValue.Size = new System.Drawing.Size(61, 20);
-            this.lbDetainedDateValue.TabIndex = 25;
-            this.lbDetainedDateValue.Text = "[????]";
+            this.lbReleasedDateValue.AutoSize = true;
+            this.lbReleasedDateValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbReleasedDateValue.Location = new System.Drawing.Point(206, 80);
+            this.lbReleasedDateValue.Name = "lbReleasedDateValue";
+            this.lbReleasedDateValue.Size = new System.Drawing.Size(61, 20);
+            this.lbReleasedDateValue.TabIndex = 25;
+            this.lbReleasedDateValue.Text = "[????]";
             // 
             // lbShowLicenseHistory
             // 
@@ -255,8 +255,8 @@
             this.gbDetainedInfo.Controls.Add(this.lb1LicenseID);
             this.gbDetainedInfo.Controls.Add(this.lb1LicenseIDValue);
             this.gbDetainedInfo.Controls.Add(this.lbApplicationFees);
-            this.gbDetainedInfo.Controls.Add(this.lbDetainedDate);
-            this.gbDetainedInfo.Controls.Add(this.lbDetainedDateValue);
+            this.gbDetainedInfo.Controls.Add(this.lbReleasedDate);
+            this.gbDetainedInfo.Controls.Add(this.lbReleasedDateValue);
             this.gbDetainedInfo.Controls.Add(this.lbDetainedID);
             this.gbDetainedInfo.Controls.Add(this.lbDetainedIDValue);
             this.gbDetainedInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -267,53 +267,25 @@
             this.gbDetainedInfo.TabStop = false;
             this.gbDetainedInfo.Text = "Detained Info";
             // 
-            // btnRelease
+            // lbApplicationID
             // 
-            this.btnRelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelease.Location = new System.Drawing.Point(920, 684);
-            this.btnRelease.Name = "btnRelease";
-            this.btnRelease.Size = new System.Drawing.Size(138, 48);
-            this.btnRelease.TabIndex = 78;
-            this.btnRelease.Text = "Release";
-            this.btnRelease.UseVisualStyleBackColor = true;
-            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
+            this.lbApplicationID.AutoSize = true;
+            this.lbApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApplicationID.Location = new System.Drawing.Point(471, 149);
+            this.lbApplicationID.Name = "lbApplicationID";
+            this.lbApplicationID.Size = new System.Drawing.Size(133, 20);
+            this.lbApplicationID.TabIndex = 43;
+            this.lbApplicationID.Text = "Application ID:";
             // 
-            // ctrlLicenseCard
+            // lbApplicationIDValue
             // 
-            this.ctrlLicenseCard.Location = new System.Drawing.Point(89, 148);
-            this.ctrlLicenseCard.Name = "ctrlLicenseCard";
-            this.ctrlLicenseCard.Size = new System.Drawing.Size(966, 318);
-            this.ctrlLicenseCard.TabIndex = 81;
-            // 
-            // lbApplicationFeesValue
-            // 
-            this.lbApplicationFeesValue.AutoSize = true;
-            this.lbApplicationFeesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApplicationFeesValue.Location = new System.Drawing.Point(206, 113);
-            this.lbApplicationFeesValue.Name = "lbApplicationFeesValue";
-            this.lbApplicationFeesValue.Size = new System.Drawing.Size(61, 20);
-            this.lbApplicationFeesValue.TabIndex = 38;
-            this.lbApplicationFeesValue.Text = "[$$$$]";
-            // 
-            // lbFanFeesValue
-            // 
-            this.lbFanFeesValue.AutoSize = true;
-            this.lbFanFeesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFanFeesValue.Location = new System.Drawing.Point(694, 113);
-            this.lbFanFeesValue.Name = "lbFanFeesValue";
-            this.lbFanFeesValue.Size = new System.Drawing.Size(61, 20);
-            this.lbFanFeesValue.TabIndex = 40;
-            this.lbFanFeesValue.Text = "[$$$$]";
-            // 
-            // lbFanFees
-            // 
-            this.lbFanFees.AutoSize = true;
-            this.lbFanFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFanFees.Location = new System.Drawing.Point(471, 113);
-            this.lbFanFees.Name = "lbFanFees";
-            this.lbFanFees.Size = new System.Drawing.Size(93, 20);
-            this.lbFanFees.TabIndex = 39;
-            this.lbFanFees.Text = "Fan Fees:";
+            this.lbApplicationIDValue.AutoSize = true;
+            this.lbApplicationIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApplicationIDValue.Location = new System.Drawing.Point(694, 149);
+            this.lbApplicationIDValue.Name = "lbApplicationIDValue";
+            this.lbApplicationIDValue.Size = new System.Drawing.Size(61, 20);
+            this.lbApplicationIDValue.TabIndex = 44;
+            this.lbApplicationIDValue.Text = "[????]";
             // 
             // lbTotalFeesValue
             // 
@@ -335,25 +307,53 @@
             this.lbTotalFees.TabIndex = 41;
             this.lbTotalFees.Text = "Total Fees:";
             // 
-            // lbApplicationID
+            // lbFanFeesValue
             // 
-            this.lbApplicationID.AutoSize = true;
-            this.lbApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApplicationID.Location = new System.Drawing.Point(471, 149);
-            this.lbApplicationID.Name = "lbApplicationID";
-            this.lbApplicationID.Size = new System.Drawing.Size(133, 20);
-            this.lbApplicationID.TabIndex = 43;
-            this.lbApplicationID.Text = "Application ID:";
+            this.lbFanFeesValue.AutoSize = true;
+            this.lbFanFeesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFanFeesValue.Location = new System.Drawing.Point(694, 113);
+            this.lbFanFeesValue.Name = "lbFanFeesValue";
+            this.lbFanFeesValue.Size = new System.Drawing.Size(61, 20);
+            this.lbFanFeesValue.TabIndex = 40;
+            this.lbFanFeesValue.Text = "[$$$$]";
             // 
-            // lbApplicationIDValue
+            // lbFanFees
             // 
-            this.lbApplicationIDValue.AutoSize = true;
-            this.lbApplicationIDValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbApplicationIDValue.Location = new System.Drawing.Point(694, 149);
-            this.lbApplicationIDValue.Name = "lbApplicationIDValue";
-            this.lbApplicationIDValue.Size = new System.Drawing.Size(61, 20);
-            this.lbApplicationIDValue.TabIndex = 44;
-            this.lbApplicationIDValue.Text = "[????]";
+            this.lbFanFees.AutoSize = true;
+            this.lbFanFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFanFees.Location = new System.Drawing.Point(471, 113);
+            this.lbFanFees.Name = "lbFanFees";
+            this.lbFanFees.Size = new System.Drawing.Size(93, 20);
+            this.lbFanFees.TabIndex = 39;
+            this.lbFanFees.Text = "Fan Fees:";
+            // 
+            // lbApplicationFeesValue
+            // 
+            this.lbApplicationFeesValue.AutoSize = true;
+            this.lbApplicationFeesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbApplicationFeesValue.Location = new System.Drawing.Point(206, 113);
+            this.lbApplicationFeesValue.Name = "lbApplicationFeesValue";
+            this.lbApplicationFeesValue.Size = new System.Drawing.Size(61, 20);
+            this.lbApplicationFeesValue.TabIndex = 38;
+            this.lbApplicationFeesValue.Text = "[$$$$]";
+            // 
+            // btnRelease
+            // 
+            this.btnRelease.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelease.Location = new System.Drawing.Point(920, 684);
+            this.btnRelease.Name = "btnRelease";
+            this.btnRelease.Size = new System.Drawing.Size(138, 48);
+            this.btnRelease.TabIndex = 78;
+            this.btnRelease.Text = "Release";
+            this.btnRelease.UseVisualStyleBackColor = true;
+            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
+            // 
+            // ctrlLicenseCard
+            // 
+            this.ctrlLicenseCard.Location = new System.Drawing.Point(89, 148);
+            this.ctrlLicenseCard.Name = "ctrlLicenseCard";
+            this.ctrlLicenseCard.Size = new System.Drawing.Size(966, 318);
+            this.ctrlLicenseCard.TabIndex = 81;
             // 
             // frmReleaseLicense
             // 
@@ -393,8 +393,8 @@
         private System.Windows.Forms.Label lb1LicenseID;
         private System.Windows.Forms.Label lb1LicenseIDValue;
         private System.Windows.Forms.Label lbApplicationFees;
-        private System.Windows.Forms.Label lbDetainedDate;
-        private System.Windows.Forms.Label lbDetainedDateValue;
+        private System.Windows.Forms.Label lbReleasedDate;
+        private System.Windows.Forms.Label lbReleasedDateValue;
         private System.Windows.Forms.LinkLabel lbShowLicenseHistory;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbDetainedID;

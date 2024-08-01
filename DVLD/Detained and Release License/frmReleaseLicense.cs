@@ -29,7 +29,7 @@ namespace DVLD.Detained_and_Release_License
         void LoadData()
         {
   
-            lbDetainedDateValue.Text = DateTime.Now.ToString("dd MMM yyyy");
+            lbReleasedDateValue.Text = DateTime.Now.ToString("dd MMM yyyy");
             lbFanFeesValue.Text = Convert.ToInt16(_DetainedLicense.FineFees).ToString();
             lbApplicationFeesValue.Text = Convert.ToInt16(_ApplicationType.ApplicationFees).ToString();
             lbTotalFeesValue.Text = Convert.ToInt16(_DetainedLicense.FineFees + _ApplicationType.ApplicationFees).ToString();
@@ -42,7 +42,7 @@ namespace DVLD.Detained_and_Release_License
         {
 
             lbDetainedIDValue.Text = "[????]";
-            lbDetainedDateValue.Text = "[????]";
+            lbReleasedDateValue.Text = "[????]";
             lbApplicationIDValue.Text = "[????]";
             lbApplicationFeesValue.Text = "[????]";
             lbFanFeesValue.Text = "[????]";
