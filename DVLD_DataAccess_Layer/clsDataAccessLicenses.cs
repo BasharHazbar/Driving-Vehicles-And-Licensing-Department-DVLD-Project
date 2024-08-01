@@ -254,9 +254,62 @@ namespace DVLD_DataAccess_Layer
             return dt;
         }
 
+        public static bool IsDetainedLicense(int LicenseID)
+        {
+            bool isExist = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
+
+            string query = " select Found =1 from DetainedLicenses where IsReleased = 0 and LicenseID = @LicenseID;";
+
+            SqlCommand cmd = new SqlCommand(query, connection);
+
+            cmd.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    isExist = true;
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                isExist = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return isExist;
+        }
+
         public static DataTable GetLicensesInfo(int ApplicationID)
         {
             DataTable dt = new DataTable();
+
+            // Define the schema of the DataTable
+            dt.Columns.Add("ClassName", typeof(string));
+            dt.Columns.Add("FullName", typeof(string));
+            dt.Columns.Add("LicenseID", typeof(int));
+            dt.Columns.Add("NationalNo", typeof(string));
+            dt.Columns.Add("Gendor", typeof(string));
+            dt.Columns.Add("IssueDate", typeof(string));
+            dt.Columns.Add("ExpirationDate", typeof(string));
+            dt.Columns.Add("IssueReason", typeof(string));
+            dt.Columns.Add("IsActive", typeof(string));
+            dt.Columns.Add("IsDetainedLicense", typeof(string));
+            dt.Columns.Add("DateOfBirth", typeof(string));
+            dt.Columns.Add("DriverID", typeof(int));
+            dt.Columns.Add("Notes", typeof(string));
+            dt.Columns.Add("ImagePath", typeof(string));
+
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
 
@@ -315,9 +368,28 @@ namespace DVLD_DataAccess_Layer
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.HasRows)
+                while (reader.Read())
                 {
-                    dt.Load(reader);
+
+                    DataRow row = dt.NewRow();
+
+                    row["ClassName"] = reader["ClassName"];
+                    row["FullName"] = reader["FullName"];
+                    row["LicenseID"] = reader["LicenseID"];
+                    row["NationalNo"] = reader["NationalNo"];
+                    row["Gendor"] = reader["Gendor"];
+                    row["IssueDate"] = reader["IssueDate"];
+                    row["ExpirationDate"] = reader["ExpirationDate"];
+                    row["IssueReason"] = reader["IssueReason"];
+                    row["IsActive"] = reader["IsActive"];
+                    row["IsDetainedLicense"] = IsDetainedLicense((int)reader["LicenseID"]) ? "Yes" : "No";
+                    row["DateOfBirth"] = reader["DateOfBirth"];
+                    row["DriverID"] = reader["DriverID"];
+                    row["Notes"] = reader["Notes"];
+                    row["ImagePath"] = reader["ImagePath"];
+
+                    // Add the DataRow to the DataTable
+                    dt.Rows.Add(row);
                 }
 
                 reader.Close();

@@ -97,6 +97,7 @@ namespace DVLD_Business_Layer
 
         }
 
+
         public bool Save()
         {
 
@@ -137,6 +138,11 @@ namespace DVLD_Business_Layer
         public static bool IsOrdinarydrivinglicense(int LicenseID)
         {
             return clsDataAccessLicenses.IsOrdinarydrivinglicense(LicenseID);
+        }
+
+        public static bool IsDetainedLicense(int LicenseID)
+        {
+            return clsDataAccessLicenses.IsDetainedLicense(LicenseID);
         }
 
         public static DataTable GetLicensesInfo(int ApplicationID)

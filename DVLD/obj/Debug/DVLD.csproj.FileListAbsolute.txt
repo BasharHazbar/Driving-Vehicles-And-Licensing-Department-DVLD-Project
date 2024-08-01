@@ -17,6 +17,8 @@ D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlLicenseCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlLoginUserInformation.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlPersonCard.resources
 D:\Projects\DVLD\obj\Debug\DVLD.Controls.ctrlUserCard.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Detained_and_Release_License.frmDetainedLicense.resources
+D:\Projects\DVLD\obj\Debug\DVLD.Detained_and_Release_License.frmReleaseLicense.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmDriversManagement.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmMain.resources
 D:\Projects\DVLD\obj\Debug\DVLD.frmTest.resources

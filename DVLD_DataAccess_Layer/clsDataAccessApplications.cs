@@ -279,15 +279,15 @@ namespace DVLD_DataAccess_Layer
 
                     DataRow row = dt.NewRow();
 
-                    row["L.D.L.AppID"] = (int)reader["L.D.L.AppID"];
-                    row["PersonID"] = (int)reader["PersonID"];
-                    row["ApplicationID"] = (int)reader["ApplicationID"];
-                    row["LicenseClassID"] = (int)reader["LicenseClassID"];
-                    row["Driving Class"] = (string)reader["Driving Class"];
-                    row["National No."] =  (string)reader["National No."];
-                    row["Full Name"] = (string)reader["Full Name"];
+                    row["L.D.L.AppID"] = reader["L.D.L.AppID"];
+                    row["PersonID"] = reader["PersonID"];
+                    row["ApplicationID"] = reader["ApplicationID"];
+                    row["LicenseClassID"] = reader["LicenseClassID"];
+                    row["Driving Class"] = reader["Driving Class"];
+                    row["National No."] =  reader["National No."];
+                    row["Full Name"] = reader["Full Name"];
                     row["Passed Test"] = PassedTestCount((int)reader["L.D.L.AppID"]);
-                    row["Status"] = (string)reader["Status"];
+                    row["Status"] = reader["Status"];
 
                     dt.Rows.Add(row);
 

@@ -1,4 +1,5 @@
 ﻿using DVLD.Application_Types;
+using DVLD.Detained_and_Release_License;
 using DVLD.International_Driving_License;
 using DVLD.Licenses_History;
 using DVLD.Local_Driving_Licenses;
@@ -30,8 +31,8 @@ namespace DVLD
             //Application.Run(new frmReplacementForDamageOrLostLocalLicense());
 
             //Application.Run(new frmRenewLocalDrivingLicense());
-            Application.Run(new frmLogin());
-            // Application.Run(new frmUsersManagement());
+            //Application.Run(new frmLogin());
+            Application.Run(new frmReleaseLicense());
 
             // Application.Run(new frmIssueInternationalDrivingLicense());
         }

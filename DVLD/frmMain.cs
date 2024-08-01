@@ -112,8 +112,9 @@ namespace DVLD
         private void tsmLogout_Click(object sender, EventArgs e)
         {
             this.Hide();
+
             frmLogin Login = new frmLogin();  
-            Login.Show();
+            Login.ShowDialog();
             Login.Dispose();
         }
 
@@ -146,5 +147,7 @@ namespace DVLD
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
         }
+
+       
     }
 }

@@ -203,8 +203,6 @@ namespace DVLD.Replacement_Local_Driving_License
                     return;
                 }
             }
-
-
         }
 
         private void btnIssueReplacement_Click(object sender, EventArgs e)

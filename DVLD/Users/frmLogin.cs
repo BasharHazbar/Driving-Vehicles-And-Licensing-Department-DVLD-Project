@@ -27,7 +27,7 @@ namespace DVLD.Users
         {
             if (IsEmptyFaild())
             {
-                MessageBox.Show("Please Fill The Faild + ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Fill The Faild", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -47,7 +47,7 @@ namespace DVLD.Users
                 this.Hide();
                 clsGlobalSettings.User = User;
                 frmMain Main = new frmMain();
-                Main.Show();
+                Main.ShowDialog();
                 Main.Dispose();
             }
         }

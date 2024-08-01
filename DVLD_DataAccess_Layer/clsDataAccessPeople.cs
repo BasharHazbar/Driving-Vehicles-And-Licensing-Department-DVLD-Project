@@ -10,10 +10,6 @@ namespace DVLD_DataAccess_Layer
     public class clsDataAccessPeople
     {
 
-        private static object CheckIsNullOrEmpty(string Value)
-        {
-            return string.IsNullOrEmpty(Value) ? (object)DBNull.Value : Value;
-        }
 
         public static bool Find(int PersonID, ref string NationalNo, ref string FirstName, ref string SecondName, ref string ThirdName, 
             ref string LastName, ref DateTime DateOfBirth, ref short Gendor, ref string Address, ref string Email,ref string Phone,
@@ -201,7 +197,7 @@ namespace DVLD_DataAccess_Layer
             cmd.Parameters.AddWithValue("@FirstName", FirstName);
             cmd.Parameters.AddWithValue("@SecondName", SecondName);
 
-            cmd.Parameters.AddWithValue("@ThirdName", CheckIsNullOrEmpty(ThirdName));
+            cmd.Parameters.AddWithValue("@ThirdName", clsDataAccessSetting.CheckIsNullOrEmpty(ThirdName));
 
             cmd.Parameters.AddWithValue("@LastName", LastName);
             cmd.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
@@ -211,11 +207,11 @@ namespace DVLD_DataAccess_Layer
             cmd.Parameters.AddWithValue("@Address", Address);
             cmd.Parameters.AddWithValue("@Phone", Phone);
 
-            cmd.Parameters.AddWithValue("@Email", CheckIsNullOrEmpty(Email));
+            cmd.Parameters.AddWithValue("@Email", clsDataAccessSetting.CheckIsNullOrEmpty(Email));
 
             cmd.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
 
-            cmd.Parameters.AddWithValue("@ImagePath", CheckIsNullOrEmpty(ImagePath));
+            cmd.Parameters.AddWithValue("@ImagePath", clsDataAccessSetting.CheckIsNullOrEmpty(ImagePath));
 
 
             try
@@ -275,7 +271,7 @@ namespace DVLD_DataAccess_Layer
             cmd.Parameters.AddWithValue("@FirstName", FirstName);
             cmd.Parameters.AddWithValue("@SecondName", SecondName);
 
-            cmd.Parameters.AddWithValue("@ThirdName", CheckIsNullOrEmpty(ThirdName));
+            cmd.Parameters.AddWithValue("@ThirdName", clsDataAccessSetting.CheckIsNullOrEmpty(ThirdName));
 
 
             cmd.Parameters.AddWithValue("@LastName", LastName);
@@ -284,11 +280,11 @@ namespace DVLD_DataAccess_Layer
             cmd.Parameters.AddWithValue("@Address", Address);
             cmd.Parameters.AddWithValue("@Phone", Phone);
 
-            cmd.Parameters.AddWithValue("@Email",CheckIsNullOrEmpty(Email));
+            cmd.Parameters.AddWithValue("@Email", clsDataAccessSetting.CheckIsNullOrEmpty(Email));
 
             cmd.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
 
-            cmd.Parameters.AddWithValue("@ImagePath", CheckIsNullOrEmpty(ImagePath));
+            cmd.Parameters.AddWithValue("@ImagePath", clsDataAccessSetting.CheckIsNullOrEmpty(ImagePath));
 
             try {
                 connection.Open();

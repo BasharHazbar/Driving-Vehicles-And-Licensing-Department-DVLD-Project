@@ -68,7 +68,7 @@ namespace DVLD.Controls
 
             }
 
-            lbIsDetainedValue.Text = "No";
+            lbIsDetainedValue.Text = (string)_LicenseInfo["IsDetainedLicense"];
 
             if (_LicenseInfo["ImagePath"] != null)
             {
