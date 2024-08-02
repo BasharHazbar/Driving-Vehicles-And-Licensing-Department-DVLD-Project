@@ -31,8 +31,8 @@ namespace DVLD
             //Application.Run(new frmReplacementForDamageOrLostLocalLicense());
 
             //Application.Run(new frmRenewLocalDrivingLicense());
-            //Application.Run(new frmLogin());
-            Application.Run(new frmReleaseLicense());
+            Application.Run(new frmLogin());
+            //Application.Run(new frmDetainedAndReleaseLicenseManagement());
 
             // Application.Run(new frmIssueInternationalDrivingLicense());
         }

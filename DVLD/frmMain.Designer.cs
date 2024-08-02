@@ -53,6 +53,9 @@
             this.tsmCurrentUser = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDetainedLicenseManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmDetainedLicense = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmReleaseLicense = new System.Windows.Forms.ToolStripMenuItem();
             this.msMainMenuDvld.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -186,6 +189,10 @@
             // 
             // detainedLicencesToolStripMenuItem
             // 
+            this.detainedLicencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmDetainedLicenseManagement,
+            this.tsmDetainedLicense,
+            this.tsmReleaseLicense});
             this.detainedLicencesToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detainedLicencesToolStripMenuItem.Name = "detainedLicencesToolStripMenuItem";
             this.detainedLicencesToolStripMenuItem.Size = new System.Drawing.Size(308, 26);
@@ -272,6 +279,27 @@
             this.tsmLogout.Text = "Sing Out";
             this.tsmLogout.Click += new System.EventHandler(this.tsmLogout_Click);
             // 
+            // tsmDetainedLicenseManagement
+            // 
+            this.tsmDetainedLicenseManagement.Name = "tsmDetainedLicenseManagement";
+            this.tsmDetainedLicenseManagement.Size = new System.Drawing.Size(341, 26);
+            this.tsmDetainedLicenseManagement.Text = "Detained License Management";
+            this.tsmDetainedLicenseManagement.Click += new System.EventHandler(this.tsmDetainedLicenseManagement_Click);
+            // 
+            // tsmDetainedLicense
+            // 
+            this.tsmDetainedLicense.Name = "tsmDetainedLicense";
+            this.tsmDetainedLicense.Size = new System.Drawing.Size(341, 26);
+            this.tsmDetainedLicense.Text = "Detained License";
+            this.tsmDetainedLicense.Click += new System.EventHandler(this.tsmDetainedLicense_Click);
+            // 
+            // tsmReleaseLicense
+            // 
+            this.tsmReleaseLicense.Name = "tsmReleaseLicense";
+            this.tsmReleaseLicense.Size = new System.Drawing.Size(341, 26);
+            this.tsmReleaseLicense.Text = "Release License";
+            this.tsmReleaseLicense.Click += new System.EventHandler(this.tsmReleaseLicense_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,5 +346,8 @@
         private System.Windows.Forms.ToolStripMenuItem aplicationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem applicationManagementToolStripMenuItem;
         private System.Windows.Forms.MenuStrip msMainMenuDvld;
+        private System.Windows.Forms.ToolStripMenuItem tsmDetainedLicenseManagement;
+        private System.Windows.Forms.ToolStripMenuItem tsmDetainedLicense;
+        private System.Windows.Forms.ToolStripMenuItem tsmReleaseLicense;
     }
 }

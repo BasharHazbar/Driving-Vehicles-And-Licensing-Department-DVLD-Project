@@ -11,8 +11,6 @@ namespace DVLD_DataAccess_Layer
 {
     public class clsDataAccessDetainedLicenses
     {
-
-  
         public static bool Find(int DetainID, ref int LicensesID, ref DateTime DetainDate, ref decimal FineFees,
             ref int CreatedByUserID, ref bool IsReleased, ref DateTime? ReleaseDate,ref int ReleasedByUserID,
             ref int ReleaseApplicationID)
@@ -66,7 +64,6 @@ namespace DVLD_DataAccess_Layer
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 isFind = false;
             }
             finally
@@ -130,7 +127,6 @@ namespace DVLD_DataAccess_Layer
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 isFind = false;
             }
             finally
@@ -194,8 +190,6 @@ namespace DVLD_DataAccess_Layer
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
-
             }
             finally
             {
@@ -267,46 +261,58 @@ namespace DVLD_DataAccess_Layer
             return RowEffects > 0;
         }
 
-///*
-//        public static DataTable GetDetainedLicensesList()
-//        {
-//            DataTable dt = new DataTable();
+        public static DataTable GetDetainedAndReleaseLicenseList()
+        {
+            DataTable dt = new DataTable();
 
-//            SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.connectionDbInfo);
 
-//            string Query = " select * from People_View ";
-
-
-//            SqlCommand cmd = new SqlCommand(Query, connection);
-
-//            try
-//            {
-//                connection.Open();
-
-//                SqlDataReader reader = cmd.ExecuteReader();
-
-//                if (reader.HasRows)
-//                {
-//                    dt.Load(reader);
-//                }
-
-//                cmd.ExecuteReader();
+            string Query = @" select p.PersonID,l.ApplicationID, l.LicenseID, dl.DetainID as 'D ID', dl.DetainDate as 'D Date', dl.IsReleased as 'Is Released', 
+                                dl.FineFees as 'Fine Fees', dl.ReleaseDate as 'Release Date', p.NationalNo as 'N No', 
+                                case 
+                                when p.ThirdName is not null then 
+                                 p.FirstName + ' '  + p.SecondName + ' '  + 
+                                                    + ' '  + p.ThirdName + ' '  + 
+                                                    p.LastName
+                                when p.ThirdName is null then 
+                                 p.FirstName + ' '  + p.SecondName + ' '  + p.LastName
+                                                     else 'Unknown'
+                                                    end as 'Full Name', dl.ReleaseApplicationID as 'Release App ID'
+                                from DetainedLicenses dl
+                                join Licenses l on l.LicenseID = dl.LicenseID
+                                join Drivers dr on dr.DriverID = l.DriverID
+                                join People p on p.PersonID = dr.PersonID ";
 
 
-//            }
-//            catch (Exception ex)
-//            {
+            SqlCommand cmd = new SqlCommand(Query, connection);
 
-//            }
-//            finally
-//            {
-//                connection.Close();
-//            }
+            try
+            {
+                connection.Open();
 
-//            return dt;
-//        }
+                SqlDataReader reader = cmd.ExecuteReader();
 
-//*/
+                if (reader.HasRows)
+                {
+                    dt.Load(reader);
+                }
+
+                cmd.ExecuteReader();
+
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+        }
+
         public static bool isExist(int DetainID)
         {
             bool isExist = false;
@@ -333,7 +339,6 @@ namespace DVLD_DataAccess_Layer
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
                 isExist = false;
             }
             finally
@@ -370,7 +375,6 @@ namespace DVLD_DataAccess_Layer
 
             catch (Exception ex)
             {
-
             }
 
             finally

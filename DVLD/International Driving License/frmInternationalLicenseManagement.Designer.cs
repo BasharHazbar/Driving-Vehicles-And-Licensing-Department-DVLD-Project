@@ -44,10 +44,22 @@
             this.lbFilter = new System.Windows.Forms.Label();
             this.cbFindByIsActive = new System.Windows.Forms.ComboBox();
             pbAddNewIntLicense = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntLicensesList)).BeginInit();
             this.cmsIntLicensesManagement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pbAddNewIntLicense
+            // 
+            pbAddNewIntLicense.Cursor = System.Windows.Forms.Cursors.Hand;
+            pbAddNewIntLicense.Image = global::DVLD.Properties.Resources.Add_Application;
+            pbAddNewIntLicense.Location = new System.Drawing.Point(1130, 69);
+            pbAddNewIntLicense.Name = "pbAddNewIntLicense";
+            pbAddNewIntLicense.Size = new System.Drawing.Size(88, 64);
+            pbAddNewIntLicense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pbAddNewIntLicense.TabIndex = 47;
+            pbAddNewIntLicense.TabStop = false;
+            pbAddNewIntLicense.Click += new System.EventHandler(this.pbAddNewIntLicense_Click);
             // 
             // lbRecordsCountValue
             // 
@@ -194,18 +206,6 @@
             this.cbFindByIsActive.TabIndex = 46;
             this.cbFindByIsActive.SelectedIndexChanged += new System.EventHandler(this.cbFindByIsActive_SelectedIndexChanged);
             // 
-            // pbAddNewIntLicense
-            // 
-            pbAddNewIntLicense.Cursor = System.Windows.Forms.Cursors.Hand;
-            pbAddNewIntLicense.Image = global::DVLD.Properties.Resources.Add_Application;
-            pbAddNewIntLicense.Location = new System.Drawing.Point(1130, 69);
-            pbAddNewIntLicense.Name = "pbAddNewIntLicense";
-            pbAddNewIntLicense.Size = new System.Drawing.Size(88, 64);
-            pbAddNewIntLicense.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            pbAddNewIntLicense.TabIndex = 47;
-            pbAddNewIntLicense.TabStop = false;
-            pbAddNewIntLicense.Click += new System.EventHandler(this.pbAddNewIntLicense_Click);
-            // 
             // frmInternationalLicenseManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,9 +225,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "International License Management";
             this.Load += new System.EventHandler(this.frmInternationalLicenseManagement_Load);
+            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIntLicensesList)).EndInit();
             this.cmsIntLicensesManagement.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(pbAddNewIntLicense)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

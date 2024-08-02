@@ -1,6 +1,7 @@
 ﻿using DVLD_DataAccess_Layer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -149,6 +150,10 @@ namespace DVLD_Business_Layer
             return clsDataAccessDetainedLicenses.isExist(DetainID);
         }
 
+        public static DataTable GetDetainedAndReleaseLicenseList()
+        {
+            return clsDataAccessDetainedLicenses.GetDetainedAndReleaseLicenseList();
+        }
         public static bool Delete(int DetainID)
         {
             return clsDetainedLicenses.Delete(DetainID);

@@ -15,14 +15,16 @@ namespace DVLD.Detained_and_Release_License
 {
     public partial class frmReleaseLicense : Form
     {
+        private int _LicenseID;
         private clsLicenses _License;
         private clsDrivers _Driver;
         private clsDetainedLicenses _DetainedLicense;
         private clsApplicationTypes _ApplicationType;
         private clsApplications _Application;
-        public frmReleaseLicense()
+        public frmReleaseLicense(int LicenseID)
         {
             InitializeComponent();
+            _LicenseID = LicenseID;
         }
 
 
@@ -49,6 +51,20 @@ namespace DVLD.Detained_and_Release_License
             btnRelease.Enabled = false;
         }
 
+
+
+        void LoadDataForReleasing()
+        {
+            gbFilter.Enabled = false;
+            _License = clsLicenses.Find(_LicenseID);
+            _Driver = clsDrivers.Find(_License.DriverID);
+            _DetainedLicense = clsDetainedLicenses.FindByLicenseID(_License.LicenseID);
+            _ApplicationType = clsApplicationTypes.Find((byte)clsGlobalSettings.enApplicationTypes.ReleaseDetainedDrivingLicsense);
+            ctrlLicenseCard.LoadLicenseData(_License.ApplicationID);
+            lbShowLicenseHistory.Enabled = true;
+            btnRelease.Enabled = true;
+            LoadData();
+        }
 
         void LoadLicenseData()
         {
@@ -100,8 +116,7 @@ namespace DVLD.Detained_and_Release_License
             _Application.ApplicationStatus = 1;
             _Application.PaidFees = _ApplicationType.ApplicationFees;
             _Application.LastStatusDate = DateTime.Now;
-            //_Application.CreatedByUserID = clsGlobalSettings.User.UserID;
-            _Application.CreatedByUserID = 1;
+            _Application.CreatedByUserID = clsGlobalSettings.User.UserID;
 
             if (MessageBox.Show("Are you sure you want to Release the License ", "Confirm",
              MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -112,7 +127,7 @@ namespace DVLD.Detained_and_Release_License
                     _DetainedLicense.IsReleased = true;
                     _DetainedLicense.ReleaseDate = DateTime.Now;
                     _DetainedLicense.ReleaseApplicationID = _Application.ApplicationID;
-                    _DetainedLicense.ReleasedByUserID = 1;
+                    _DetainedLicense.ReleasedByUserID = clsGlobalSettings.User.UserID;
 
                    if (_DetainedLicense.Save())
                     {
@@ -181,9 +196,19 @@ namespace DVLD.Detained_and_Release_License
 
         private void frmReleaseLicense_Load(object sender, EventArgs e)
         {
-            btnRelease.Enabled = false;
-            lbShowLicenseHistory.Enabled = false;
+
             lbShowReleaseLicenseInfo.Enabled = false;
+            if (_LicenseID != -1)
+            {
+                LoadDataForReleasing();
+            }
+            else
+            {
+                btnRelease.Enabled = false;
+                lbShowLicenseHistory.Enabled = false;
+            }
+            
+
         }
     }
 }

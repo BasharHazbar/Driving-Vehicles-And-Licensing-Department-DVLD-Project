@@ -113,6 +113,12 @@
     <Compile Include="Controls\ctrlUserCard.Designer.cs">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Detained and Release License\frmDetainedAndReleaseLicenseManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detained and Release License\frmDetainedAndReleaseLicenseManagement.Designer.cs">
+      <DependentUpon>frmDetainedAndReleaseLicenseManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Detained and Release License\frmDetainedLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlUserCard.resx">
       <DependentUpon>ctrlUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detained and Release License\frmDetainedAndReleaseLicenseManagement.resx">
+      <DependentUpon>frmDetainedAndReleaseLicenseManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Detained and Release License\frmDetainedLicense.resx">
       <DependentUpon>frmDetainedLicense.cs</DependentUpon>

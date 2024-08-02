@@ -265,7 +265,7 @@
             this.gbDetainedInfo.Size = new System.Drawing.Size(967, 206);
             this.gbDetainedInfo.TabIndex = 77;
             this.gbDetainedInfo.TabStop = false;
-            this.gbDetainedInfo.Text = "Detained Info";
+            this.gbDetainedInfo.Text = "Release Info";
             // 
             // lbApplicationID
             // 

@@ -1,4 +1,5 @@
 ﻿using DVLD.Application_Types;
+using DVLD.Detained_and_Release_License;
 using DVLD.International_Driving_License;
 using DVLD.Local_Driving_Licenses;
 using DVLD.People;
@@ -148,6 +149,26 @@ namespace DVLD
             }
         }
 
-       
+        private void tsmDetainedLicenseManagement_Click(object sender, EventArgs e)
+        {
+            frmDetainedAndReleaseLicenseManagement DetainedAndReleaseLicenseManagement = new frmDetainedAndReleaseLicenseManagement();
+            DetainedAndReleaseLicenseManagement.ShowDialog();
+            DetainedAndReleaseLicenseManagement.Dispose();
+        }
+
+        private void tsmDetainedLicense_Click(object sender, EventArgs e)
+        {
+            frmDetainedLicense DetainedLicense = new frmDetainedLicense();
+            DetainedLicense.ShowDialog();
+            DetainedLicense.Dispose();
+
+        }
+
+        private void tsmReleaseLicense_Click(object sender, EventArgs e)
+        {
+            frmReleaseLicense ReleaseLicense = new frmReleaseLicense(-1);
+            ReleaseLicense.ShowDialog();
+            ReleaseLicense.Dispose();
+        }
     }
 }
